@@ -84,20 +84,20 @@ setInterval(() => {
 
 setInterval(() => {
     $(".mv-copy2.text-span.pc").addClass('show');
-  }, 1000);
+  }, 600);
 
 setInterval(() => {
     $(".mv-copy2.text-span.sp").addClass('show');
-  }, 600);
+  }, 400);
 setInterval(() => {
     $(".mv-copy3.text-span.sp").addClass('show');
-  }, 1200);
+  }, 800);
 setInterval(() => {
     $(".mv-copy4.text-span.sp").addClass('show');
-  }, 1800);
+  }, 1200);
 setInterval(() => {
     $(".mv-copy5.text-span.sp").addClass('show');
-  }, 2400);
+  }, 1600);
 
 
 /*--------------------------------
