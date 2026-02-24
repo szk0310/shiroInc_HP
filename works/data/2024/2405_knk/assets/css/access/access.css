@@ -1,0 +1,337 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------
+                     ACCESS
+--------------------------------------------------- */
+
+.bg-access {
+	background: url("../../img/access/bg_contents.svg") center center no-repeat;
+	background-size: cover;
+}
+.sec-access {
+	padding: 20px 0 80px;
+}
+.sec-access h2 {
+	margin-bottom: 65px;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1;
+	position: relative;
+}
+.sec-access h2::after {
+	content: '';
+	width: 56px;
+	height: 4px;
+	background: #002060;
+	position: absolute;
+	bottom: -20px;
+	left: calc(50% - 28px);
+}
+
+.sec-access .map-wrap {
+	width: 900px;
+	margin: 0 auto 50px;
+	position: relative;
+}
+.sec-access .map-wrap .icon-pin {
+	width: 26px;
+}
+.sec-access .map-wrap .pin-vietnam {
+	position: absolute;
+	top: 370px;
+	left: 156px;
+}
+.sec-access .map-wrap .anchor-vietnam {
+	width: 235px;
+	position: absolute;
+	top: 362px;
+	left: 170px;
+}
+.sec-access .map-wrap .pin-shenzhen {
+	position: absolute;
+	top: 320px;
+	left: 280px;
+}
+.sec-access .map-wrap .anchor-shenzhen {
+	width: 182px;
+	position: absolute;
+	top: 253px;
+	left: 203px;
+}
+.sec-access .map-wrap .pin-suzhou {
+	position: absolute;
+	top: 210px;
+	left: 330px;
+}
+.sec-access .map-wrap .anchor-suzhou {
+	width: 182px;
+	position: absolute;
+	top: 140px;
+	left: 254px;
+}
+.sec-access .map-wrap .pin-korea {
+	position: absolute;
+	top: 135px;
+	left: 446px;
+}
+.sec-access .map-wrap .anchor-korea {
+	width: 140px;
+	position: absolute;
+	top: 65px;
+	left: 388px;
+}
+.sec-access .map-wrap .pin-chubu {
+	position: absolute;
+	top: 170px;
+	left: 577px;
+}
+.sec-access .map-wrap .anchor-chubu {
+	width: 170px;
+	position: absolute;
+	top: 200px;
+	left: 516px;
+}
+.sec-access .map-wrap .pin-saitama {
+	position: absolute;
+	top: 130px;
+	left: 610px;
+}
+.sec-access .map-wrap .anchor-saitama {
+	width: 222px;
+	position: absolute;
+	top: 118px;
+	left: 630px;
+}
+.sec-access .map-wrap .pin-honsha {
+	position: absolute;
+	top: 163px;
+	left: 605px;
+}
+.sec-access .map-wrap .anchor-honsha {
+	width: 191px;
+	position: absolute;
+	top: 176px;
+	left: 625px;
+}
+
+
+
+.sec-access .flex-box {
+	width: 100%;
+	max-width: 1140px;
+	margin: 0 auto 40px;
+	align-items: flex-end;
+}
+.sec-access .flex-box.flex-start {
+	margin: 0 auto 60px;
+	align-items: flex-start;
+}
+.sec-access .flex-box.last {
+	margin: 0 auto 80px;
+}
+.sec-access .box-left {
+	width: 40%;
+}
+.sec-access .txt-parallelogram {
+	width: 220px;
+	margin: 0 70px 45px auto;
+	padding: 5px;
+    text-align: center;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	position: relative;
+    z-index: 1;
+}
+.sec-access .txt-parallelogram::before{
+    content: '';
+    transform: skewX(-20deg);
+    position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+    z-index: -1;
+}
+.sec-access .txt-parallelogram.bg-green::before{
+    background: #5caac7;
+}
+.sec-access .txt-parallelogram.bg-navy::before{
+    background: #002060;
+}
+.sec-access .access-address {
+	width: 100%;
+	padding: 0 70px 30px 0;
+    text-align: right;
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 1px solid #393939;
+}
+.sec-access .access-tel {
+	width: 100%;
+	padding: 30px 70px 20px 0;
+    text-align: right;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+
+.sec-access .box-right {
+	width: 60%;
+	height: 415px;
+	overflow: hidden;
+	position: relative;
+	border: 5px solid #fff;
+}
+.sec-access .box-right iframe {
+	width: 100%;
+	height: 720px;
+	position: absolute;
+	top: -150px;
+	left: 0;
+}
+
+
+@media (max-width: 768px) {
+	.sec-access {
+		padding: 4vw 0 12vw;
+	}
+	.sec-access h2 {
+		margin-bottom: 12vw;
+		font-size: 5.2vw;
+	}
+	.sec-access h2::after {
+		content: '';
+		width: 12vw;
+		height: 4px;
+		background: #002060;
+		position: absolute;
+		bottom: -4vw;
+		left: calc(50% - 6vw);
+	}
+
+	.sec-access .map-wrap {
+		width: 100%;
+		margin: 0 auto 12vw;
+	}
+	.sec-access .map-wrap .icon-pin {
+		width: 4vw;
+	}
+	.sec-access .map-wrap .pin-vietnam {
+		top: 35vw;
+		left: 15vw;
+	}
+	.sec-access .map-wrap .anchor-vietnam {
+		width: 23vw;
+		top: 37vw;
+		left: 17vw;
+	}
+	.sec-access .map-wrap .pin-shenzhen {
+		top: 31vw;
+		left: 24vw;
+	}
+	.sec-access .map-wrap .anchor-shenzhen {
+		width: 18vw;
+		top: 26vw;
+		left: 17vw;
+	}
+	.sec-access .map-wrap .pin-suzhou {
+		top: 20vw;
+		left: 32vw;
+	}
+	.sec-access .map-wrap .anchor-suzhou {
+		width: 19vw;
+		top: 15vw;
+		left: 24.6vw;
+	}
+	.sec-access .map-wrap .pin-korea {
+		top: 13vw;
+		left: 44vw;
+	}
+	.sec-access .map-wrap .anchor-korea {
+		width: 14vw;
+		top: 7vw;
+		left: 39vw;
+	}
+	.sec-access .map-wrap .pin-chubu {
+		top: 15vw;
+		left: 57vw;
+	}
+	.sec-access .map-wrap .anchor-chubu {
+		width: 17vw;
+		top: 19vw;
+		left: 51.5vw;
+	}
+	.sec-access .map-wrap .pin-saitama {
+		top: 10vw;
+		left: 60vw;
+	}
+	.sec-access .map-wrap .anchor-saitama {
+		width: 22vw;
+		top: 9.5vw;
+		left: 63vw;
+	}
+	.sec-access .map-wrap .pin-honsha {
+		top: 14vw;
+		left: 60vw;
+	}
+	.sec-access .map-wrap .anchor-honsha {
+		width: 19vw;
+		top: 15.7vw;
+		left: 63vw;
+	}
+	
+	
+	
+	.sec-access .flex-box {
+		width: 100%;
+		margin: 0 auto 12vw;
+		display: block;
+	}
+	.sec-access .flex-box.flex-start {
+		margin: 0 auto 12vw;
+	}
+	.sec-access .flex-box.last {
+		margin: 0 auto 16vw;
+	}
+	.sec-access .box-left {
+		width: 100%;
+	}
+	.sec-access .txt-parallelogram {
+		width: 50vw;
+		margin: 0 auto 4vw 4vw;
+		padding: 1vw;
+		font-size: 3.8vw;
+	}
+	
+	.sec-access .access-address {
+		width: 100%;
+		padding: 0 0 3vw 4vw;
+		text-align: left;
+		font-size: 3.6vw;
+		border-bottom: none;
+	}
+	.sec-access .access-tel {
+		width: 100%;
+		padding: 0 0 3vw 4vw;
+		text-align: left;
+		font-size: 3.4vw;
+	}
+
+
+	.sec-access .box-right {
+		width: 100%;
+		height: 50vw;
+		overflow: hidden;
+		position: relative;
+	}
+	.sec-access .box-right iframe {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+    
+}

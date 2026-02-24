@@ -1,0 +1,468 @@
+@charset "UTF-8";
+/* ------------------------------------------------
+                    共通css
+--------------------------------------------------- */
+/*---------- header ----------*/
+header {
+    width: 100%;
+	background: #959ea4;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+header.is-fixed {
+	position: fixed;
+}
+header .header-in {
+    width: 95%;
+	max-width: 1260px;
+    margin: 0 auto;
+    padding: 5px 0;
+    display: block;
+    flex-wrap: wrap;
+}
+
+/*ロゴ*/
+header .header-logo {
+    width: 254px;
+    display: block;
+}
+header .header-logo a {
+	color: #fff;
+}
+
+@media (max-width: 768px) {
+    header {
+    }
+    header .header-in {
+        width: 96%;
+        margin: 0 auto;
+        padding: 1vw 0;
+        display: block;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    /*ロゴ*/
+    header .header-logo {
+        width: 40%;
+		max-width: 180px;
+        margin: 0 auto 0 0;
+        display: block;
+    }
+
+}
+
+
+/*---------- コンテンツ レイアウト ----------*/
+.l-main {
+	/* padding-top: 80px; */
+}
+.cont-in {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.box-flex {
+    display: flex;
+}
+
+
+@media (max-width: 768px) {
+    .cont-in {
+        width: 90%;
+        max-width: initial;
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
+
+
+
+/*---------- フォーム ----------*/
+input,
+button,
+select,
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input[type='text'],
+textarea {
+    width: 100%;
+    padding: 14px;
+    background: #fff;
+    border: 1px solid #BFBFBF;
+    resize: vertical;
+}
+textarea {
+    height: 170px;
+}
+input[type='checkbox'],
+input[type='radio'] {
+    display: none;
+}
+
+input[type='submit'],
+input[type='button'],
+label,
+button,
+select {
+    cursor: pointer;
+}
+
+input[type='date']{
+    width: 100%;
+    position: relative;
+}
+input[type='date']::-webkit-calendar-picker-indicator {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+select {
+    width: 100%;
+}
+.select-wrap{
+    width: 48%;
+    padding: 4px 0 4px 10px;
+    background: #fff;
+    border: 1px solid #BFBFBF;
+    position: relative;
+}
+.select-wrap::after {
+    content: "";
+    width: 12px;
+    height: 7px;
+    background: url("../img/common/arrow_gray01.svg") 0 0 no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: calc(50% - 3.5px);
+    right: 10px;
+}
+.select-wrap.w-100 {
+    margin: 0 auto;
+}
+
+.date-input-wrap{
+    width: 100%;
+    padding: 4px 0 4px 10px;
+    background: #fff;
+    border: 1px solid #BFBFBF;
+    position: relative;
+}
+.date-input-wrap::after {
+    content: "";
+    width: 12px;
+    height: 7px;
+    background: url("../img/common/arrow_gray01.svg") 0 0 no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: calc(50% - 3.5px);
+    right: 10px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input::placeholder, 
+textarea::placeholder { color: #A8A8A8;}
+/* IE */
+input:-ms-input-placeholder, 
+textarea:-ms-input-placeholder { color: #A8A8A8;}
+/* Edge */
+input::-ms-input-placeholder, 
+textarea::-ms-input-placeholder { color: #A8A8A8;}
+
+
+.radio-wrap label {
+    position: relative;
+    padding-left: 30px;
+}
+
+.radio-wrap label::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 1px solid #ADADAD;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.radio-wrap input:checked + label::before {
+    border: 1px solid #0092E5;
+}
+.radio-wrap input:checked + label::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 50%;
+    background: #0092E5;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+@media (max-width: 768px) {
+    input[type='text'],
+    textarea {
+        width: 100%;
+        padding: 2vw;
+        background: #fff;
+        border: 1px solid #BFBFBF;
+        resize: vertical;
+    }
+    textarea {
+        height: 40vw;
+    }
+    .select-wrap{
+        width: 48%;
+        padding: 1vw 0 1vw 2vw;
+        background: #fff;
+        border: 1px solid #BFBFBF;
+        position: relative;
+    }
+    .select-wrap::after {
+        content: "";
+        width: 2.4vw;
+        height: 2vw;
+        background: url("../img/common/arrow_gray01.svg") center center no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: calc(50% - 1vw);
+        right: 2vw;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    input::placeholder, 
+    textarea::placeholder { color: #A8A8A8;}
+    /* IE */
+    input:-ms-input-placeholder, 
+    textarea:-ms-input-placeholder { color: #A8A8A8;}
+    /* Edge */
+    input::-ms-input-placeholder, 
+    textarea::-ms-input-placeholder { color: #A8A8A8;}
+
+
+    .radio-wrap label {
+        position: relative;
+        padding-left: 6vw;
+    }
+
+    .radio-wrap label::before {
+        content: "";
+        width: 5vw;
+        height: 5vw;
+        display: block;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 1px solid #ADADAD;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .radio-wrap input:checked + label::before {
+        border: 1px solid #0092E5;
+    }
+    .radio-wrap input:checked + label::after {
+        content: "";
+        width: 3vw;
+        height: 3vw;
+        display: block;
+        border-radius: 50%;
+        background: #0092E5;
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+    }
+}
+
+
+
+
+/*---------- カラム ----------*/
+.column-02, 
+.column-03 {
+    display: flex;
+    justify-content: space-between;
+}
+.column-02 .box-in {
+    width: 48%;
+} 
+.column-03 .box-in {
+    width: 32%;
+}
+
+@media (max-width: 768px) {
+    /*カラム*/
+    .column-02, 
+    .column-03 {
+        display: block;
+    }
+    .column-02 .box-in {
+        width: 100%;
+        margin-bottom: 6vw;
+    } 
+    .column-03 .box-in {
+        width: 100%;
+        margin-bottom: 6vw;
+    }
+}
+
+/*---------- カラー ----------*/
+
+/*---------- テキスト ----------*/
+.normal-txt {
+    font-size: 16px;
+}
+.caption-txt {
+    font-size: 12px;
+}
+.txt-ttl {
+    font-size: 18px;
+    font-weight: 700;
+}
+.txt-bold {
+    font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+    .normal-txt {
+        font-size: 3.4vw;
+    }
+    .caption-txt {
+        font-size: 2.8vw;
+    }
+    .txt-ttl {
+        font-size: 3.6vw;
+        font-weight: 700;
+    }
+}
+
+/*---------- ボタン ----------*/
+
+
+@media (max-width: 768px) {
+}
+
+/*---------- footer ----------*/
+
+/* pagetop
+-----------------------------------------------------*/
+.pagetop {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid #3b393a;
+    cursor: pointer;
+    text-align: center;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 9996;
+}
+.pagetop img {
+    width: 35%;
+    margin: 8px auto 14px;
+}
+@media (max-width: 768px) {
+    .pagetop {
+        width: 12vw;
+        height: 12vw;
+        margin-bottom: 1px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        border: 1px solid #3b393a;
+        cursor: pointer;
+        text-align: center;
+        color: #000;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.2vw;
+        font-weight: 500;
+        line-height: 1;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: 9996;
+    }
+    .pagetop img {
+        width: 50%;
+        margin: 1vw auto 2vw;
+    }
+    
+}
+
+footer {
+    width: 100%;
+	display: none;
+}
+
+footer .cont-in {
+    max-width: 1024px;
+}
+
+footer .p-copyright {
+    width: 100%;
+    padding: 30px 0 40px;
+    text-align: center;
+    color: #5A5A5A;
+    font-size: 11px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        width: 100%;
+		display: block;
+    }
+
+    footer .cont-in {
+        max-width: initial;
+    }
+
+    footer .copyright {
+        width: 100%;
+        padding: 4vw 0 5vw;
+        text-align: center;
+        color: #5A5A5A;
+        font-size: 2.6vw;
+    }
+}

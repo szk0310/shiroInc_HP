@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/*main*/
+.lead-wrap{
+	font-size:1.7rem;
+	font-weight: 400;
+	line-height: 3;
+}
+.materiality-table-wrap{
+	margin-top: 40px
+}
+.materiality-table-wrap table th,
+.materiality-table-wrap table td{
+	font-size:1.2rem
+}
+.materiality-table-wrap table .cel1{
+		width:7em
+}
+.materiality-table-wrap table .cel6{
+	width:6em;
+	vertical-align: top
+}
+.materiality-table-wrap table .t-icon:not(:first-child){
+	margin-top: 10px
+}
+.materiality-table-wrap table td.cel5{
+	text-align: right
+}
+.materiality-table-wrap table .egc-txt{white-space: nowrap}
+.materiality-table-wrap table .egc-txt.e{color: #50a135;}
+.materiality-table-wrap table .egc-txt.s{color:#ce7828;}
+.materiality-table-wrap table .egc-txt.g{color: #1cb3ac;}
+
+@media screen and (max-width: 768px) {
+	.lead-wrap{
+		font-size:3.8vw;
+		font-weight: 400;
+		line-height: 2.5;
+	}
+	.materiality-table-wrap{
+		overflow-x: scroll;
+		margin-top: 4vw
+	}
+
+	.materiality-table-wrap table{
+		width:240%;
+		position: relative
+	}
+	.materiality-table-wrap table th{
+		background: #ede0e1
+	}
+
+	.materiality-table-wrap table th,
+	.materiality-table-wrap table td{
+		font-size:3.0vw
+	}
+	.materiality-table-wrap table .cel1{
+		left: -1px;
+		position: sticky;
+	}
+	.materiality-table-wrap table td.cel1{
+		background: #fcfafb;
+	}
+}
+
+
+
+
+

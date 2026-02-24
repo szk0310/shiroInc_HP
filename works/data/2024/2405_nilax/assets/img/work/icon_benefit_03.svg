@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="118" height="118" viewBox="0 0 118 118">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_2046" data-name="長方形 2046" width="44" height="85" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_2429" data-name="グループ 2429" transform="translate(-1100 -8538)">
+    <circle id="楕円形_20" data-name="楕円形 20" cx="59" cy="59" r="59" transform="translate(1100 8538)" fill="#fff"/>
+    <g id="グループ_2079" data-name="グループ 2079" transform="translate(1137 8555)">
+      <g id="グループ_2079-2" data-name="グループ 2079" clip-path="url(#clip-path)">
+        <path id="パス_1588" data-name="パス 1588" d="M44.453,84.533H0V10.889A10.889,10.889,0,0,1,10.889,0H33.564A10.889,10.889,0,0,1,44.453,10.889Z" fill="#5b8dcd"/>
+        <rect id="長方形_2033" data-name="長方形 2033" width="8.016" height="8.016" transform="translate(7.652 12.388)" fill="#fff"/>
+        <rect id="長方形_2034" data-name="長方形 2034" width="15.303" height="3.644" transform="translate(4.008 21.862)" fill="#fff"/>
+        <rect id="長方形_2035" data-name="長方形 2035" width="8.016" height="8.016" transform="translate(28.785 12.388)" fill="#fff"/>
+        <rect id="長方形_2036" data-name="長方形 2036" width="15.303" height="3.644" transform="translate(25.141 21.862)" fill="#fff"/>
+        <rect id="長方形_2037" data-name="長方形 2037" width="8.016" height="8.016" transform="translate(7.652 31.336)" fill="#fff"/>
+        <rect id="長方形_2038" data-name="長方形 2038" width="15.303" height="3.644" transform="translate(4.008 40.809)" fill="#fff"/>
+        <rect id="長方形_2039" data-name="長方形 2039" width="8.016" height="8.016" transform="translate(28.785 31.336)" fill="#fff"/>
+        <rect id="長方形_2040" data-name="長方形 2040" width="15.303" height="3.644" transform="translate(25.141 40.809)" fill="#fff"/>
+        <rect id="長方形_2041" data-name="長方形 2041" width="8.016" height="8.016" transform="translate(7.652 50.283)" fill="#fff"/>
+        <rect id="長方形_2042" data-name="長方形 2042" width="15.303" height="3.644" transform="translate(4.008 59.756)" fill="#fff"/>
+        <rect id="長方形_2043" data-name="長方形 2043" width="8.016" height="8.016" transform="translate(28.785 50.283)" fill="#fff"/>
+        <rect id="長方形_2044" data-name="長方形 2044" width="15.303" height="3.644" transform="translate(25.141 59.756)" fill="#fff"/>
+        <rect id="長方形_2045" data-name="長方形 2045" width="21" height="11" transform="translate(12 74)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+/* -----------------------------------------------------------
+reset
+----------------------------------------------------------- */
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.g-tpl div, .g-tpl h1, .g-tpl h2, .g-tpl h3, .g-tpl h4, .g-tpl h5, .g-tpl h6, .g-tpl p, .g-tpl dl, .g-tpl dt, .g-tpl dd, .g-tpl ol, .g-tpl ul, .g-tpl li, .g-tpl form, .g-tpl input, .g-tpl textarea, .g-tpl button, .g-tpl table, .g-tpl tr, .g-tpl th, .g-tpl td, .g-tpl article, .g-tpl aside, .g-tpl footer, .g-tpl header, .g-tpl hgroup, .g-tpl nav, .g-tpl section, .g-tpl a, .g-tpl span {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box; }
+
+.g-tpl div, .g-tpl dl, .g-tpl dt, .g-tpl dd, .g-tpl ul, .g-tpl ol, .g-tpl li, .g-tpl h1, .g-tpl h2, .g-tpl h3, .g-tpl h4, .g-tpl h5, .g-tpl h6, .g-tpl pre, .g-tpl form, .g-tpl fieldset, .g-tpl input, .g-tpl textarea, .g-tpl p, .g-tpl blockquote, .g-tpl th, .g-tpl td {
+	margin: 0;
+	padding: 0; }
+
+.g-tpl address, .g-tpl caption, .g-tpl cite, .g-tpl code, .g-tpl dfn, .g-tpl em, .g-tpl th, .g-tpl var {
+	font-style: normal;
+	font-weight: normal; }
+
+.g-tpl table {
+	border-collapse: collapse;
+	border-spacing: 0; }
+
+.g-tpl q:before, .g-tpl q:after {
+	content: ''; }
+
+.g-tpl object,
+.g-tpl embed {
+	vertical-align: top; }
+
+.g-tpl hr, .g-tpl legend {
+	display: none;
+	border: none; }
+
+.g-tpl abbr, .g-tpl acronym, .g-tpl fieldset {
+	border: 0; }
+
+.g-tpl tr, .g-tpl th, .g-tpl td, .g-tpl caption {
+	vertical-align: top;
+	font-style: normal;
+	font-weight: normal;
+	text-align: left; }
+
+.g-tpl ol, .g-tpl ul {
+	list-style: none; }
+
+.g-tpl h1, .g-tpl h2, .g-tpl h3, .g-tpl h4, .g-tpl h5, .g-tpl h6 {
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%; }
+
+.g-tpl img {
+	border: 0;
+	font-size: 0;
+	line-height: 0;
+	vertical-align: bottom; }

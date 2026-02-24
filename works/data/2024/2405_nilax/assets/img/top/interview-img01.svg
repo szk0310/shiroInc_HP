@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="349.135" height="394.202" viewBox="0 0 349.135 394.202">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_1401" data-name="長方形 1401" width="318.284" height="367.862" fill="none" stroke="#cbdaee" stroke-width="8"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_1588" data-name="グループ 1588" transform="translate(349.135 366.462) rotate(175)">
+    <g id="グループ_1583" data-name="グループ 1583">
+      <g id="グループ_1582" data-name="グループ 1582" clip-path="url(#clip-path)">
+        <line id="線_18" data-name="線 18" y2="6.402" transform="translate(309.486 8.799)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+        <line id="線_19" data-name="線 19" y2="133.986" transform="translate(309.486 52.087)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+        <line id="線_20" data-name="線 20" x2="2.19" y2="6.016" transform="translate(206.236 25.809)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+      </g>
+    </g>
+    <line id="線_21" data-name="線 21" x2="45.825" y2="125.906" transform="translate(221.041 66.487)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    <line id="線_22" data-name="線 22" x2="4.115" y2="4.905" transform="translate(115.03 77.107)" fill="none" stroke="#ff1901" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    <line id="線_23" data-name="線 23" x2="86.124" y2="102.64" transform="translate(142.855 110.268)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    <line id="線_24" data-name="線 24" x2="5.544" y2="3.201" transform="translate(46.87 156.506)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    <line id="線_25" data-name="線 25" x2="116.035" y2="66.994" transform="translate(84.359 178.15)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    <g id="グループ_1585" data-name="グループ 1585">
+      <g id="グループ_1584" data-name="グループ 1584" clip-path="url(#clip-path)">
+        <line id="線_26" data-name="線 26" x2="6.305" y2="1.111" transform="translate(9.977 254.428)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+      </g>
+    </g>
+    <line id="線_27" data-name="線 27" x2="131.951" y2="23.267" transform="translate(52.607 261.945)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+    <g id="グループ_1587" data-name="グループ 1587">
+      <g id="グループ_1586" data-name="グループ 1586" clip-path="url(#clip-path)">
+        <line id="線_28" data-name="線 28" y1="1.111" x2="6.305" transform="translate(8.799 357.952)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+        <line id="線_29" data-name="線 29" y1="23.267" x2="131.951" transform="translate(51.43 328.279)" fill="none" stroke="#cbdaee" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+      </g>
+    </g>
+  </g>
+</svg>

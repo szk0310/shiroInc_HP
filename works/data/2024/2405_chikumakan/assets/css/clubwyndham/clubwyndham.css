@@ -1,0 +1,158 @@
+@charset "UTF-8";
+/* MV
+---------------------------------------------------------------------------- */
+.p-sec-mv {
+  width: 100%;
+  padding: 24.5rem 0 27.2rem;
+  background: url("../../images/clubwyndham/img_mv_pc.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.p-mv-ttl {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.p-mv-ttl-ja {
+  color: #fff;
+  font-size: 2.8rem;
+  line-height: 2.2142857143;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.16);
+}
+
+@media screen and (max-width: 767px) {
+  .p-sec-mv {
+    width: 100%;
+    padding: 13.3333333333vw 0 76vw;
+    background: url("../../images/clubwyndham/img_mv_sp.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .p-mv-ttl {
+    width: 100%;
+    color: #fff;
+    opacity: 0.85;
+    display: block;
+    position: relative;
+    z-index: 2;
+  }
+  .p-mv-ttl-ja {
+    display: block;
+    font-size: 4.8vw;
+  }
+}
+/* メインコンテンツ
+---------------------------------------------------------------------------- */
+.p-sec-clubwyndham {
+  width: 100%;
+  padding: 14.6rem 0 0;
+}
+
+.p-contents-box {
+  width: 100%;
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+.p-contents-box.last {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.p-contents-img {
+  width: 50%;
+}
+
+.p-contents-txt {
+  width: calc(50% - 7rem);
+  font-size: 1.4rem;
+  line-height: 1.7857142857;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+.p-link-clubwyndhamasia {
+  width: 90%;
+  max-width: 450px;
+  margin: 12.6rem auto 10rem;
+  padding: 2.7rem 0;
+  display: block;
+  background: #E3E3E3;
+  color: #707070;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.5555555556;
+  font-weight: 700;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.p-link-clubwyndhamasia:hover {
+  background: #000;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .p-sec-clubwyndham {
+    width: 100%;
+    padding: 9.3333333333vw 0 0;
+  }
+  .p-contents-box {
+    width: 100%;
+    margin-bottom: 10.6666666667vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .p-contents-box.last {
+    margin-bottom: 8vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .p-contents-img {
+    width: 100%;
+    margin-bottom: 5.3333333333vw;
+  }
+  .p-contents-txt {
+    width: 100%;
+    font-size: 4vw;
+  }
+  .p-link-clubwyndhamasia {
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto 8vw;
+    padding: 5.3333333333vw 0;
+    font-size: 3.7333333333vw;
+  }
+}

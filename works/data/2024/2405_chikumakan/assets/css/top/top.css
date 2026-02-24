@@ -1,0 +1,591 @@
+@charset "UTF-8";
+/* MV
+---------------------------------------------------------------------------- */
+.p-sec-mv {
+  width: 100%;
+  position: relative;
+}
+
+.p-mv-ttl {
+  width: 40%;
+  max-width: 360px;
+  position: absolute;
+  top: 13vw;
+  right: 10%;
+}
+.p-mv-ttl img {
+  width: 100%;
+  max-width: initial;
+}
+
+@media screen and (max-width: 767px) {
+  .p-sec-mv {
+    width: 100%;
+  }
+  .p-mv-ttl {
+    width: 50%;
+    max-width: initial;
+    background: rgba(0, 0, 0, 0.34);
+    position: absolute;
+    /*top: 4%;*/
+    right: 25%;
+  }
+}
+/* slide
+---------------------------------------------------------------------------- */
+.slide-arrow {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: calc(50% - 17.5px);
+  z-index: 5;
+  cursor: pointer;
+}
+
+.arrow-prev {
+  background: url("../../images/top/icn_arrow_prev.svg") center center no-repeat;
+  background-size: 100%;
+  left: 10px;
+}
+
+.arrow-next {
+  background: url("../../images/top/icn_arrow_next.svg") center center no-repeat;
+  background-size: 100%;
+  right: 10px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 40px;
+  left: 5%;
+  display: block;
+  width: 90%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  z-index: 4;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:before {
+  line-height: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  content: "";
+  text-align: center;
+  opacity: 1;
+  background: #707070;
+  border-radius: 50%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  background: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .slide-arrow {
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    z-index: 5;
+  }
+  .arrow-prev {
+    left: 2vw;
+  }
+  .arrow-next {
+    right: 2vw;
+  }
+  .slick-dots {
+    position: absolute;
+    bottom: 5vw;
+    left: 5%;
+    display: block;
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    z-index: 4;
+  }
+  .slick-dots li {
+    width: 2vw;
+    height: 2vw;
+    margin: 0 1vw;
+  }
+  .slick-dots li button {
+    width: 2vw;
+    height: 2vw;
+  }
+  .slick-dots li button:before {
+    width: 2vw;
+    height: 2vw;
+  }
+}
+/* リンク
+---------------------------------------------------------------------------- */
+.p-sec-about {
+  width: 100%;
+  padding: 50px 0 90px;
+}
+
+.p-about-txt {
+  font-size: 1.85rem;
+  line-height: 1.7297297297;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* 下層ページ導線 横長 */
+.p-about-link-wrap {
+  width: 100%;
+  margin-bottom: 5.5rem;
+}
+
+.p-about-link {
+  width: 100%;
+  margin-top: 5rem;
+  padding: 2.5rem 4rem 3rem;
+  display: block;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.p-about-link::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.p-about-link:hover::after {
+  opacity: 1;
+}
+
+.p-about-link-onsen {
+  background-image: url("../../images/top/img_top_01.jpg");
+}
+
+.p-about-link-cuisine {
+  background-image: url("../../images/top/img_top_02.jpg");
+}
+
+.p-about-link-rooms {
+  background-image: url("../../images/top/img_top_03.jpg");
+}
+
+.p-about-link-facility {
+  background-image: url("../../images/top/img_top_04.jpg");
+}
+
+.p-about-txt-wrap {
+  width: 40%;
+  max-width: 22rem;
+  padding: 4rem 2rem 3rem;
+  background: rgba(0, 0, 0, 0.51);
+  border: 1px solid rgba(255, 255, 255, 0.51);
+  position: relative;
+  z-index: 3;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.p-about-txt-wrap.is-odd {
+  margin-right: auto;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+.p-about-txt-wrap.is-odd .p-about-link-txt {
+  width: 100%;
+  margin-top: 20px;
+}
+.p-about-txt-wrap.is-odd .p-about-link-ttl-en {
+  margin-left: 10px;
+}
+.p-about-txt-wrap.is-even {
+  margin-left: auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+.p-about-txt-wrap.is-even .p-about-link-txt {
+  margin-right: 16px;
+}
+.p-about-txt-wrap.is-even .p-about-link-ttl-en {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.p-about-link-onsen:hover .p-about-txt-wrap,
+.p-about-link-cuisine:hover .p-about-txt-wrap {
+  background: rgba(208, 92, 92, 0.7);
+  border: 1px solid transparent;
+}
+
+.p-about-link-rooms:hover .p-about-txt-wrap,
+.p-about-link-facility:hover .p-about-txt-wrap {
+  background: rgba(30, 157, 50, 0.6);
+  border: 1px solid transparent;
+}
+
+.p-about-link:hover .p-about-txt-wrap::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+}
+
+.p-about-link-ttl {
+  font-size: 3rem;
+  line-height: 1.3333333333;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+
+.p-about-link-ttl-en {
+  font-size: 1.2rem;
+  line-height: 1.1666666667;
+  letter-spacing: 0.3em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.p-about-link-txt {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+/* 下層ページ導線 3column */
+.p-about-link-small-wrap {
+  width: 85%;
+  margin: 0 auto;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -ms-flex-align: start;
+  -webkit-box-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.p-about-link-small {
+  width: calc((100% - 75px) / 3);
+  margin: 0 12.5px;
+}
+.p-about-link-small a {
+  display: block;
+  -webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+  position: relative;
+}
+.p-about-link-small a::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.p-about-link-small-ttl {
+  width: 100%;
+  padding: 0.8rem 0;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.8666666667;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  background: #000000;
+  position: relative;
+  z-index: 2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.p-about-link-img-caption {
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  text-shadow: 0 0 5px #2B2624;
+  position: absolute;
+  bottom: 6px;
+  right: 10px;
+  z-index: 3;
+}
+
+.p-about-link-small-txt {
+  margin-top: 1.2rem;
+  font-size: 1.4rem;
+  line-height: 1.4285714286;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 768px) {
+  .p-about-link-small a:hover::after {
+    opacity: 0;
+  }
+  .p-about-link-small a:hover .p-about-link-small-ttl {
+    color: #F7ED6A;
+  }
+}
+@media screen and (max-width: 767px) {
+  .p-sec-about {
+    width: 100%;
+    padding: 8.5333333333vw 0 11.7333333333vw;
+  }
+  .p-sec-about .m-sec-inn {
+    width: 100%;
+    max-width: initial;
+  }
+  .p-about-txt {
+    width: 90%;
+    margin: 0 auto 8.5333333333vw;
+    font-size: 4vw;
+    text-align: left;
+  }
+  /* 下層ページ導線 横長 */
+  .p-about-link-wrap {
+    width: 100%;
+    margin-bottom: 11.7333333333vw;
+  }
+  .p-about-link {
+    width: 100%;
+    margin-top: 5.3333333333vw;
+    padding: 5.8666666667vw 10.6666666667vw 8.5333333333vw;
+    display: block;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .p-about-link:first-child {
+    margin-top: 0;
+  }
+  .p-about-link::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .p-about-link:hover::after {
+    opacity: 1;
+  }
+  .p-about-link-onsen {
+    background-image: url("../../images/top/img_top_01_sp.jpg");
+  }
+  .p-about-link-cuisine {
+    background-image: url("../../images/top/img_top_02_sp.jpg");
+  }
+  .p-about-link-rooms {
+    background-image: url("../../images/top/img_top_03_sp.jpg");
+  }
+  .p-about-link-facility {
+    background-image: url("../../images/top/img_top_04_sp.jpg");
+  }
+  .p-about-txt-wrap {
+    width: 58%;
+    max-width: initial;
+    padding: 10.1333333333vw 4.2666666667vw 5.3333333333vw;
+    background: rgba(0, 0, 0, 0.51);
+    border: 1px solid rgba(255, 255, 255, 0.51);
+    position: relative;
+    z-index: 3;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .p-about-txt-wrap.is-odd .p-about-link-txt {
+    width: 100%;
+    margin-top: 5.3333333333vw;
+  }
+  .p-about-txt-wrap.is-odd .p-about-link-ttl-en {
+    margin-left: 4.2666666667vw;
+  }
+  .p-about-txt-wrap.is-even .p-about-link-txt {
+    margin-right: 4.2666666667vw;
+  }
+  .p-about-txt-wrap.is-even .p-about-link-ttl-en {
+    margin-top: 5.3333333333vw;
+  }
+  .p-about-link:hover .p-about-txt-wrap::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+  }
+  .p-about-link-ttl {
+    font-size: 7.4666666667vw;
+  }
+  .p-about-link-ttl-en {
+    font-size: 2.4vw;
+  }
+  .p-about-link-txt {
+    font-size: 2.4vw;
+  }
+  /* 下層ページ導線 3column */
+  .p-about-link-small-wrap {
+    width: 75%;
+    margin: 0 auto;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
+            justify-content: center;
+    -ms-flex-align: start;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+  .p-about-link-small {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .p-about-link-small a {
+    width: 100%;
+    display: block;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    position: relative;
+  }
+  .p-about-link-small a::after {
+    content: none;
+  }
+  .p-about-link-small-access {
+    margin-bottom: 6.6666666667vw;
+    background: url("../../images/top/img_top_05_sp.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  .p-about-link-small-sightseeing {
+    margin-bottom: 6.6666666667vw;
+    background: url("../../images/top/img_top_06_sp.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  .p-about-link-small-reserve {
+    background: url("../../images/top/img_top_07_sp.jpg") center center no-repeat;
+    background-size: cover;
+  }
+  .p-about-link-small-ttl {
+    width: 35%;
+    padding: 6.9333333333vw 0;
+    text-align: center;
+    font-size: 4.2666666667vw;
+    background: rgba(0, 0, 0, 0.72);
+    position: relative;
+    z-index: 2;
+  }
+}
+/* パララックス
+---------------------------------------------------------------------------- */
+.p-sec-view {
+  width: 100%;
+  height: 50vw;
+  margin-bottom: 6rem;
+  background: url("../../images/top/img_view.jpg") no-repeat;
+  background-size: 150%;
+  background-position: center top;
+}
+
+@media screen and (max-width: 767px) {
+  .p-sec-view {
+    width: 100%;
+    height: 70vw;
+    margin-bottom: 0;
+    background: url("../../images/top/img_view.jpg") no-repeat;
+    background-size: 200%;
+    background-position: center top;
+  }
+}
