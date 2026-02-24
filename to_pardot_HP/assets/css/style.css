@@ -452,7 +452,7 @@ a.btn-black:after {
 .text-span span {
   display: inline-block;
   transform: translate(0, 105%);
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
 }
 
 .text-span.show span {
@@ -460,171 +460,171 @@ a.btn-black:after {
 }
 
 .text-span.show span:nth-child(2) {
-  transition-delay: 0.03s;
+  transition-delay: 0.02s;
 }
 
 .text-span.show span:nth-child(3) {
-  transition-delay: 0.06s;
+  transition-delay: 0.04s;
 }
 
 .text-span.show span:nth-child(4) {
-  transition-delay: 0.09s;
+  transition-delay: 0.06s;
 }
 
 .text-span.show span:nth-child(5) {
-  transition-delay: 0.12s;
+  transition-delay: 0.08s;
 }
 
 .text-span.show span:nth-child(6) {
-  transition-delay: 0.15s;
+  transition-delay: 0.10s;
 }
 
 .text-span.show span:nth-child(7) {
-  transition-delay: 0.18s;
+  transition-delay: 0.12s;
 }
 
 .text-span.show span:nth-child(8) {
-  transition-delay: 0.21s;
+  transition-delay: 0.14s;
 }
 
 .text-span.show span:nth-child(9) {
-  transition-delay: 0.24s;
+  transition-delay: 0.16s;
 }
 
 .text-span.show span:nth-child(10) {
-  transition-delay: 0.27s;
+  transition-delay: 0.18s;
 }
 
 .text-span.show span:nth-child(11) {
-  transition-delay: 0.30s;
+  transition-delay: 0.20s;
 }
 
 .text-span.show span:nth-child(12) {
-  transition-delay: 0.33s;
+  transition-delay: 0.22s;
 }
 
 .text-span.show span:nth-child(13) {
-  transition-delay: 0.36s;
+  transition-delay: 0.24s;
 }
 
 .text-span.show span:nth-child(14) {
-  transition-delay: 0.39s;
+  transition-delay: 0.26s;
 }
 
 .text-span.show span:nth-child(15) {
-  transition-delay: 0.42s;
+  transition-delay: 0.28s;
 }
 
 .text-span.show span:nth-child(16) {
-  transition-delay: 0.45s;
+  transition-delay: 0.30s;
 }
 
 .text-span.show span:nth-child(17) {
-  transition-delay: 0.48s;
+  transition-delay: 0.32s;
 }
 
 .text-span.show span:nth-child(18) {
-  transition-delay: 0.51s;
+  transition-delay: 0.34s;
 }
 
 .text-span.show span:nth-child(19) {
-  transition-delay: 0.54s;
+  transition-delay: 0.36s;
 }
 
 .text-span.show span:nth-child(20) {
-  transition-delay: 0.57s;
+  transition-delay: 0.38s;
 }
 
 .text-span.show span:nth-child(21) {
-  transition-delay: 0.60s;
+  transition-delay: 0.40s;
 }
 
 .text-span.show span:nth-child(22) {
-  transition-delay: 0.63s;
+  transition-delay: 0.42s;
 }
 
 .text-span.show span:nth-child(23) {
-  transition-delay: 0.66s;
+  transition-delay: 0.44s;
 }
 
 .text-span.show span:nth-child(24) {
-  transition-delay: 0.69s;
+  transition-delay: 0.46s;
 }
 
 .text-span.show span:nth-child(25) {
-  transition-delay: 0.72s;
+  transition-delay: 0.48s;
 }
 
 .text-span.show span:nth-child(26) {
-  transition-delay: 0.75s;
+  transition-delay: 0.50s;
 }
 
 .text-span.show span:nth-child(27) {
-  transition-delay: 0.78s;
+  transition-delay: 0.52s;
 }
 
 .text-span.show span:nth-child(28) {
-  transition-delay: 0.81s;
+  transition-delay: 0.54s;
 }
 
 .text-span.show span:nth-child(29) {
-  transition-delay: 0.84s;
+  transition-delay: 0.56s;
 }
 
 .text-span.show span:nth-child(30) {
-  transition-delay: 0.87s;
+  transition-delay: 0.58s;
 }
 
 .text-span.show span:nth-child(31) {
-  transition-delay: 0.90s;
+  transition-delay: 0.60s;
 }
 
 .text-span.show span:nth-child(32) {
-  transition-delay: 1.10s;
+  transition-delay: 0.80s;
 }
 
 .text-span.show span:nth-child(33) {
-  transition-delay: 1.13s;
+  transition-delay: 0.82s;
 }
 
 .text-span.show span:nth-child(34) {
-  transition-delay: 1.16s;
+  transition-delay: 0.84s;
 }
 
 .text-span.show span:nth-child(35) {
-  transition-delay: 1.19s;
+  transition-delay: 0.86s;
 }
 
 .text-span.show span:nth-child(36) {
-  transition-delay: 1.22s;
+  transition-delay: 0.88s;
 }
 
 .text-span.show span:nth-child(37) {
-  transition-delay: 1.25s;
+  transition-delay: 0.90s;
 }
 
 .text-span.show span:nth-child(38) {
-  transition-delay: 1.28s;
+  transition-delay: 0.92s;
 }
 
 .text-span.show span:nth-child(39) {
-  transition-delay: 1.31s;
+  transition-delay: 0.94s;
 }
 
 .text-span.show span:nth-child(40) {
-  transition-delay: 1.34s;
+  transition-delay: 0.96s;
 }
 
 .text-span.show span:nth-child(41) {
-  transition-delay: 1.37s;
+  transition-delay: 0.98s;
 }
 
 .text-span.show span:nth-child(42) {
-  transition-delay: 1.40s;
+  transition-delay: 1.00s;
 }
 
 .text-span.show span:nth-child(43) {
-  transition-delay: 1.43s;
+  transition-delay: 1.02s;
 }
 
 .mv-slide {
