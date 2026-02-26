@@ -1,5 +1,0 @@
-
-AuthUserFile "/home/shirok/shiroinc.co.jp/htpasswd/works/.htpasswd"
-AuthName "Member Site"
-AuthType BASIC
-require valid-user
