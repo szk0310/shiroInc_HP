@@ -1,117 +1,165 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0">
-    <meta HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
-    <meta name="description" content="shiro Inc.は飯田橋にあるウェブコンテンツの制作会社でセールスフォース社公認パートナーです。CVRをアップするデザインと正確なコーディングが得意です。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="description"
+        content="shiro Inc.は、飯田橋を拠点とするウェブコンテンツ制作会社です。Salesforce公認パートナーとして、AI・データ活用から心に響くデザイン・正確なコーディングまで、貴社の「対話」を深化させる体験を創造します。">
+    <meta name="keywords" content="shiro Inc, ウェブ制作, Salesforceパートナー, AI検索対応, フロントエンド開発, LP制作">
 
-    <title>shiro Inc.</title>
+    <title>shiro Inc. | 人と企業が『共鳴』するウェブ体験を</title>
 
-    <link href="to_pardot_HP/assets/css/base.css" rel="stylesheet" type="text/css">
-    <link href="to_pardot_HP/assets/css/style.css" rel="stylesheet" type="text/css">
-    <link href="to_pardot_HP/assets/css/slick.css" rel="stylesheet" type="text/css">
+    <link rel="canonical" href="https://shiroinc.co.jp/">
+
+    <!-- Open Graph / Meta for AI & Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:url" content="https://shiroinc.co.jp/">
+    <meta property="og:title" content="shiro Inc. | 人と企業が『共鳴』するウェブ体験を">
+    <meta property="og:description" content="AI時代の新しいウェブのあり方を。Salesforce公認パートナーのshiro Inc.が、確かな技術とデザインで貴社の価値を届けます。">
+    <meta property="og:image" content="https://shiroinc.co.jp/assets/img/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="shiro Inc. | 人と企業が『共鳴』するウェブ体験を">
+    <meta name="twitter:description" content="AI時代の新しいウェブのあり方を。Salesforce公認パートナーのshiro Inc.が、確かな技術とデザインで貴社の価値を届けます。">
+    <meta name="twitter:image" content="https://shiroinc.co.jp/assets/img/og-image.jpg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://shiroinc.co.jp/#organization",
+          "name": "shiro Inc.",
+          "url": "https://shiroinc.co.jp/",
+          "logo": "https://shiroinc.co.jp/assets/img/h-logo.svg",
+          "image": "https://shiroinc.co.jp/assets/img/og-image.jpg",
+          "description": "shiro Inc.は、東京・飯田橋を拠点とするウェブコンテンツ制作会社です。Salesforce公認コンサルティングパートナーとして、LP・Webサイト制作、AIマーケティング支援、Webアプリ開発を提供しています。",
+          "foundingDate": "2011",
+          "numberOfEmployees": {
+            "@type": "QuantitativeValue",
+            "value": 8
+          },
+          "telephone": "+81-3-6272-4119",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "富士見1-3-10 CF1310 1F",
+            "addressLocality": "千代田区",
+            "addressRegion": "東京都",
+            "postalCode": "102-0071",
+            "addressCountry": "JP"
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://shiroinc.co.jp/#localbusiness",
+          "name": "shiro Inc.",
+          "url": "https://shiroinc.co.jp/",
+          "image": "https://shiroinc.co.jp/assets/img/og-image.jpg",
+          "description": "LP・Webサイト制作、AIマーケティング支援、Webアプリ・システム開発を提供するウェブコンテンツ制作会社。Salesforce公認コンサルティングパートナー。",
+          "telephone": "+81-3-6272-4119",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "富士見1-3-10 CF1310 1F",
+            "addressLocality": "千代田区",
+            "addressRegion": "東京都",
+            "postalCode": "102-0071",
+            "addressCountry": "JP"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 35.6983563,
+            "longitude": 139.7463174
+          },
+          "priceRange": "¥¥"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://shiroinc.co.jp/#website",
+          "url": "https://shiroinc.co.jp/",
+          "name": "shiro Inc.",
+          "publisher": { "@id": "https://shiroinc.co.jp/#organization" },
+          "inLanguage": "ja"
+        },
+        {
+          "@type": "Service",
+          "name": "LP・Webサイト制作",
+          "provider": { "@id": "https://shiroinc.co.jp/#organization" },
+          "description": "ユーザーの「知りたい」に寄り添ったLP・Webサイト制作。迷わず読み進められる導線設計と、企業の想いが伝わるデザインを提供します。",
+          "areaServed": "JP",
+          "url": "https://shiroinc.co.jp/#Production"
+        },
+        {
+          "@type": "Service",
+          "name": "AIマーケティング支援",
+          "provider": { "@id": "https://shiroinc.co.jp/#organization" },
+          "description": "AI検索時代に対応したマーケティング支援。Salesforce公認コンサルティングパートナーとして、AI・データを活用した集客・エンゲージメント施策を提供します。",
+          "areaServed": "JP",
+          "url": "https://shiroinc.co.jp/#Marketing"
+        },
+        {
+          "@type": "Service",
+          "name": "Webアプリ・システム開発",
+          "provider": { "@id": "https://shiroinc.co.jp/#organization" },
+          "description": "AIコーディング技術を活用した業務効率化アプリやWebサービスの開発。開発期間を大幅短縮し、ビジネスの「やりたい」を素早く形にします。",
+          "areaServed": "JP",
+          "url": "https://shiroinc.co.jp/#webapp"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Stylesheets -->
+    <link href="assets/css/base.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/slick.css" rel="stylesheet" type="text/css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="assets/css/tailwind.css" rel="stylesheet">
 
+    <!-- Fonts -->
     <link href="https://api.fontshare.com/v2/css?f[]=chillax@1,600,500,300,700,400,200&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
 
-    <!-- Preload First Slide Images for LCP Optimization -->
-    <link rel="preload" as="image" href="to_pardot_HP/assets/img/img-mv-01.webp" media="(min-width: 769px)">
-    <link rel="preload" as="image" href="to_pardot_HP/assets/img/img-mv-01-sp.webp" media="(max-width: 768px)">
-
-    <!--<link rel="icon" href="favicon.ico">-->
-
-    <!-- Google reCAPTCHA v3 -->
-    <script src="https://www.google.com/recaptcha/api.js?render=6LcWEXEnAAAAAHy9RBSdl4M3IMBaMfR5YLGMk8f0"></script>
-    <script>
-        function post_results() {
-            var fm = document.getElementById("form_results");
-            grecaptcha.ready(function () {
-                grecaptcha.execute('6LcWEXEnAAAAAHy9RBSdl4M3IMBaMfR5YLGMk8f0', { action: 'results' }).then(function (token) {
-                    // フォーム送信時に使用するトークンを取得
-                    fm.recaptcha_token.value = token;
-                    fm.method = "post";
-                    fm.action = "https://shiro-k.jp/recaptcha/results_hp2023.php";
-                    fm.submit();
-                });
-            });
-        }
-
-        function post_kakaku() {
-            var fm = document.getElementById("form_kakaku");
-            grecaptcha.ready(function () {
-                grecaptcha.execute('6LcWEXEnAAAAAHy9RBSdl4M3IMBaMfR5YLGMk8f0', { action: 'kakaku' }).then(function (token) {
-                    // フォーム送信時に使用するトークンを取得
-                    fm.recaptcha_token.value = token;
-                    fm.method = "post";
-                    fm.action = "https://shiro-k.jp/recaptcha/kakaku_hp2023.php";
-                    fm.submit();
-                });
-            });
-        }
-        function post_toi() {
-            var fm = document.getElementById("form_toi");
-            grecaptcha.ready(function () {
-                grecaptcha.execute('6LcWEXEnAAAAAHy9RBSdl4M3IMBaMfR5YLGMk8f0', { action: 'toi' }).then(function (token) {
-                    // フォーム送信時に使用するトークンを取得
-                    fm.recaptcha_token.value = token;
-                    fm.method = "post";
-                    fm.action = "https://shiro-k.jp/recaptcha/toi_hp2023.php";
-                    fm.submit();
-                });
-            });
-        }
-    </script>
-
-    <!-- End reCAPTCHA v3 -->
+    <!-- Preload for Performance -->
+    <link rel="preload" as="image" href="assets/img/img-mv-01.webp" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="assets/img/img-mv-01-sp.webp" media="(max-width: 768px)">
 
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
+                'gtm.start': new Date().getTime(), event: 'gtm.js'
             }); var f = d.getElementsByTagName(s)[0],
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-5D9SWMW');</script>
-    <!-- End Google Tag Manager -->
 
-
-    (function() {
-    function async_load(){
-    var s = document.createElement('script'); s.type = 'text/javascript';
-    s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
-    var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
-    }
-    if(window.attachEvent) { window.attachEvent('onload', async_load); }
-    else { window.addEventListener('load', async_load, false); }
-    })();
-    </script>
 </head>
 
 <body>
-    <!-- header -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D9SWMW" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+
     <header data-aos="fade-down" data-aos-delay="1200">
         <div class="header-in">
-            <h1 class="header-logo"><a href="#"><img src="to_pardot_HP/assets/img/h-logo.svg" alt="shiro"></a></h1>
-            <div class="gnav-wrap">
-                <nav>
-                    <ul id="gnav">
-                        <li class="is-imghover"><a href="#service" class="">Service</a></li>
-                        <li class="is-imghover"><a href="#works" class="">Works</a></li>
-                        <li class="is-imghover"><a href="#company" class="">Company</a></li>
-                        <!-- <li class="btn-contact"><a href="#" class="js-modal-open"
-                                    data-target="modal03"><span>Contact</span></a></li> -->
-                    </ul>
-                </nav>
-            </div>
-            <div id="sp-menu-trigger">
+            <h1 class="header-logo">
+                <a href="/"><img src="assets/img/h-logo.svg" alt="shiro Inc."></a>
+            </h1>
+            <nav class="gnav-wrap">
+                <ul id="gnav">
+                    <li class="is-imghover"><a href="#service">Service</a></li>
+                    <li class="is-imghover"><a href="#works">Works</a></li>
+                    <li class="is-imghover"><a href="#company">Company</a></li>
+                </ul>
+            </nav>
+            <div id="sp-menu-trigger" aria-label="メニューを開く">
                 <div class="sp-menu-trigger-in">
                     <span></span>
                     <span></span>
@@ -120,11 +168,10 @@
             </div>
         </div>
     </header>
-    <!-- header -->
 
     <main class="l-main">
 
-        <!-- ===== MV ===== -->
+        <!-- Hero Section -->
         <section class="sec-mv">
             <div class="mv-in">
                 <p class="mv-copy text-span pc">
@@ -133,135 +180,95 @@
                 <p class="mv-copy2 text-span pc">
                     <span>C</span><span>o</span><span>m</span><span>p</span><span>a</span><span>n</span><span>y</span><span>&nbsp;</span><span>v</span><span>i</span><span>a</span><span>&nbsp;</span><span>w</span><span>e</span><span>b</span>
                 </p>
-                <p class="mv-copy text-span sp">
-                    <span>E</span><span>n</span><span>g</span><span>a</span><span>g</span><span>e</span>
-                </p>
-                <p class="mv-copy2 text-span sp">
-                    <span>p</span><span>e</span><span>r</span><span>s</span><span>o</span><span>n</span><span>&nbsp;</span><span>t</span><span>o</span>
-                </p>
-                <p class="mv-copy3 text-span sp">
-                    <span>c</span><span>o</span><span>m</span><span>p</span><span>a</span><span>n</span><span>y</span>
-                </p>
-                <p class="mv-copy4 text-span sp">
-                    <span>v</span><span>i</span><span>a</span><span>&nbsp;</span><span>w</span><span>e</span><span>b</span>
-                </p>
+                <div class="sp">
+                    <p class="mv-copy text-span">
+                        <span>E</span><span>n</span><span>g</span><span>a</span><span>g</span><span>e</span>
+                    </p>
+                    <p class="mv-copy2 text-span">
+                        <span>p</span><span>e</span><span>r</span><span>s</span><span>o</span><span>n</span><span>&nbsp;</span><span>t</span><span>o</span>
+                    </p>
+                    <p class="mv-copy3 text-span">
+                        <span>c</span><span>o</span><span>m</span><span>p</span><span>a</span><span>n</span><span>y</span>
+                    </p>
+                    <p class="mv-copy4 text-span">
+                        <span>v</span><span>i</span><span>a</span><span>&nbsp;</span><span>w</span><span>e</span><span>b</span>
+                    </p>
+                </div>
 
-                <div>
+                <div class="mv-slide-wrap">
                     <div class="mv-slide">
                         <picture>
-                            <!-- SP用のWebP画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-01-sp.webp" type="image/webp"
+                            <source data-lazy="assets/img/img-mv-01-sp.webp" type="image/webp"
                                 media="(max-width: 768px)">
-                            <!-- SP用のjpg画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-01-sp.jpg" type="image/jpeg"
+                            <source data-lazy="assets/img/img-mv-01-sp.jpg" type="image/jpeg"
                                 media="(max-width: 768px)">
-
-                            <!-- PC用のWebP画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-01.webp" type="image/webp"
-                                media="(min-width: 769px)">
-                            <!-- PC用のjpg画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-01.jpg" type="image/jpeg"
-                                media="(min-width: 769px)">
-
-                            <!-- Fallback画像 -->
-                            <img data-lazy="to_pardot_HP/assets/img/img-mv-01.jpg" alt="mv">
+                            <source data-lazy="assets/img/img-mv-01.webp" type="image/webp" media="(min-width: 769px)">
+                            <source data-lazy="assets/img/img-mv-01.jpg" type="image/jpeg" media="(min-width: 769px)">
+                            <img data-lazy="assets/img/img-mv-01.jpg" alt="shiro Inc. メインビジュアル 01">
                         </picture>
                         <picture>
-                            <!-- SP用のWebP画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-02-sp.webp" type="image/webp"
+                            <source data-lazy="assets/img/img-mv-02-sp.webp" type="image/webp"
                                 media="(max-width: 768px)">
-                            <!-- SP用のjpg画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-02-sp.jpg" type="image/jpeg"
+                            <source data-lazy="assets/img/img-mv-02-sp.jpg" type="image/jpeg"
                                 media="(max-width: 768px)">
-
-                            <!-- PC用のWebP画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-02.webp" type="image/webp"
-                                media="(min-width: 769px)">
-                            <!-- PC用のjpg画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-02.jpg" type="image/jpeg"
-                                media="(min-width: 769px)">
-
-                            <!-- Fallback画像 -->
-                            <img data-lazy="to_pardot_HP/assets/img/img-mv-02.jpg" alt="mv">
+                            <source data-lazy="assets/img/img-mv-02.webp" type="image/webp" media="(min-width: 769px)">
+                            <source data-lazy="assets/img/img-mv-02.jpg" type="image/jpeg" media="(min-width: 769px)">
+                            <img data-lazy="assets/img/img-mv-02.jpg" alt="shiro Inc. メインビジュアル 02">
                         </picture>
                         <picture>
-                            <!-- SP用のWebP画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-04-sp.webp" type="image/webp"
+                            <source data-lazy="assets/img/img-mv-04-sp.webp" type="image/webp"
                                 media="(max-width: 768px)">
-                            <!-- SP用のjpg画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-04-sp.jpg" type="image/jpeg"
+                            <source data-lazy="assets/img/img-mv-04-sp.jpg" type="image/jpeg"
                                 media="(max-width: 768px)">
-
-                            <!-- PC用のWebP画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-04.webp" type="image/webp"
-                                media="(min-width: 769px)">
-                            <!-- PC用のjpg画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-04.jpg" type="image/jpeg"
-                                media="(min-width: 769px)">
-
-                            <!-- Fallback画像 -->
-                            <img data-lazy="to_pardot_HP/assets/img/img-mv-04.jpg" alt="mv">
+                            <source data-lazy="assets/img/img-mv-04.webp" type="image/webp" media="(min-width: 769px)">
+                            <source data-lazy="assets/img/img-mv-04.jpg" type="image/jpeg" media="(min-width: 769px)">
+                            <img data-lazy="assets/img/img-mv-04.jpg" alt="shiro Inc. メインビジュアル 03">
                         </picture>
                         <picture>
-                            <!-- SP用のWebP画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-05-sp.webp" type="image/webp"
+                            <source data-lazy="assets/img/img-mv-05-sp.webp" type="image/webp"
                                 media="(max-width: 768px)">
-                            <!-- SP用のjpg画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-05-sp.jpg" type="image/jpeg"
+                            <source data-lazy="assets/img/img-mv-05-sp.jpg" type="image/jpeg"
                                 media="(max-width: 768px)">
-
-                            <!-- PC用のWebP画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-05.webp" type="image/webp"
-                                media="(min-width: 769px)">
-                            <!-- PC用のjpg画像 -->
-                            <source data-lazy="to_pardot_HP/assets/img/img-mv-05.jpg" type="image/jpeg"
-                                media="(min-width: 769px)">
-
-                            <!-- Fallback画像 -->
-                            <img data-lazy="to_pardot_HP/assets/img/img-mv-05.jpg" alt="mv">
+                            <source data-lazy="assets/img/img-mv-05.webp" type="image/webp" media="(min-width: 769px)">
+                            <source data-lazy="assets/img/img-mv-05.jpg" type="image/jpeg" media="(min-width: 769px)">
+                            <img data-lazy="assets/img/img-mv-05.jpg" alt="shiro Inc. メインビジュアル 04">
                         </picture>
-
                     </div>
                 </div>
-                <p class="mv-txt">ウェブは人と企業が出会う大切な場所、<br>私たちはその想いでウェブページの品質スコア向上に努めています。</p>
-                <p class="mv-bnr"><img src="to_pardot_HP/assets/img/partner_logo.png" alt="salesforce Partner Logo"></p>
-                <p class="mv-txt-below">shiro Inc.はセールスフォース社の公認コンサルティングパートナーです</p>
+
+                <div class="mv-txt">
+                    <p>
+                        正解が先回りして提示される時代だからこそ、shiro
+                        Inc.は「お客様が自ら選ぶ余地」を何よりも大切にしたいと考えています。AIやデータは、判断を奪うものではなく、一人ひとりの歩幅に寄り添い、選択肢をそっと支える存在であるべきです。
+                    </p>
+                    <p class="block mt-12px">
+                        私たちが目指すのは、貴社の想いや価値観をビジュアルと言葉で丁寧に編み上げ、お客様の主体性を引き出す場づくりです。単なる制作を超え、データとAIを味方につけて共に信頼を育んでいく——。そんな体温のあるエンゲージメント設計を、ぜひ貴社のパートナーとして、横に並んで一緒に形にさせてください。
+                    </p>
+                </div>
             </div>
         </section>
-        <!-- ===== MV ===== -->
 
-        <!-- ===== CV ===== -->
-        <!-- <section class="sec-cv" data-aos="fade-up">
-               <<div class="cv-left">
-                    <a href="#" class="btn-black js-modal-open" data-target="modal01">span>詳しい制作実績はこちら</span></a>
-                </div>
-                <div class="cv-right">
-                    <a href="#" class="btn-black js-modal-open" data-target="modal02"><span>標準価格表はこちら</span></a>
-                </div>
-            </section>-->
-        <!-- ===== CV ===== -->
-
-        <!-- ===== service ===== -->
-        <section class="sec-service" id="service">
+        <!-- Service Section -->
+        <section id="service" class="sec-service">
             <div class="service-top">
-                <h2 class="sec-ttl text-span">
-                    <span>S</span><span>e</span><span>r</span><span>v</span><span>i</span><span>s</span><span>e</span>
+                <h2 class="sec-ttl text-span" aria-label="ウェブは、人と企業が『共鳴』しあうための対話の場へ">
+                    <span aria-hidden="true">ウ</span><span aria-hidden="true">ェ</span><span aria-hidden="true">ブ</span><span aria-hidden="true">は</span><span aria-hidden="true">、</span><span aria-hidden="true">人</span><span aria-hidden="true">と</span><span aria-hidden="true">企</span><span aria-hidden="true">業</span><span aria-hidden="true">が</span><span aria-hidden="true">『</span><span aria-hidden="true">共</span><span aria-hidden="true">鳴</span><span aria-hidden="true">』</span><span aria-hidden="true">し</span><span aria-hidden="true">あ</span><span aria-hidden="true">う</span><span aria-hidden="true">た</span><span aria-hidden="true">め</span><span aria-hidden="true">の</span><span aria-hidden="true">対</span><span aria-hidden="true">話</span><span aria-hidden="true">の</span><span aria-hidden="true">場</span><span aria-hidden="true">へ</span>
                 </h2>
-                <p class="sec-sub-ttl text-span">
-                    <span>s</span><span>h</span><span>i</span><span>r</span><span>o</span><span>&nbsp;</span><span>I</span><span>n</span><span>c</span><span>.</span><span>が</span><span>考</span><span>え</span><span>る</span><span>た</span><span>っ</span><span>た</span><span>ひ</span><span>と</span><span>つ</span><span>の</span><span>冴</span><span>え</span><span>た</span><span>や</span><span>り</span><span>か</span><span>た</span>
-                </p>
-                <p class="service-txt-lead">
-                    昭和歌謡は、年配の人だけでなく若者にも人気があります。<br>彼らはTikTokやYouTubeを通じて、昔の曲を知る機会が増えています。これにより、昭和歌謡を楽しむ人を年齢や性別で分けるのは、あまり意味がなくなってきています。
-                </p>
-                <p class="service-txt-lead">一方で、さまざまなプラットフォームで集められた個々の活動データはクラウドに保存され、AIがそれを元に自動的に個別化された情報をメールで送ってくれます。
-                </p>
-                <p class="service-txt-lead">
-                    このような状況ではいたずらにユーザーをセグメント化するよりも、貴社がどのようにユーザーと繋がりたいかをビジュアルとテキストで明確に発信して、そのメッセージに共感するユーザーをデータから知りアプローチすることが重要です。
-                </p>
 
+                <div class="service-txt-lead">
+                    <p>
+                        ウェブは、もはや情報を置くだけの箱ではありません。それは、訪れた人が何を感じ、どう応えたいかを共に紡ぎ出す「対話を深める入り口」です。
+                        私たちは、単なるデザインを超え、心が動く瞬間の積み重ねをデザインします。
+                    </p>
+                    <p class="block mt-12px">
+                        最も大切なのは、貴社がどんな想いで、誰と繋がりたいのかという「純粋な意志」です。<br>
+                        その旗印に共感したユーザーが、自ら一歩を踏み出す。AIテクノロジーと人の想いが溶け合い、深い信頼が育まれる——。私たちは、そんな体温のあるウェブ体験をカタチにします。
+                    </p>
+                </div>
             </div>
 
-            <div class="service-con odd">
+            <!-- Production -->
+            <article id="Production" class="service-con odd">
                 <div class="loop-wrap" data-aos="fade">
                     <div class="loop_txt">
                         <div>LP・Website Production</div>
@@ -271,489 +278,246 @@
                         <div>LP・Website Production</div>
                     </div>
                 </div>
-                <a class="service-img" data-aos="fade-up" href="#" target="_blank">
+                <div class="service-img" data-aos="fade-up">
                     <picture>
-                        <!-- WebP用画像 -->
-                        <source srcset="to_pardot_HP/assets/img/img-service-01.webp" type="image/webp">
-                        <!-- 従来画像 -->
-                        <img src="to_pardot_HP/assets/img/img-service-01.jpg" alt="デジタルマネー払いゲートウェイサービス">
+                        <source srcset="assets/img/img-service-01.webp" type="image/webp">
+                        <img src="assets/img/img-service-01.jpg" alt="ウェブサイト制作の実績イメージ">
                     </picture>
-                </a>
+                </div>
                 <div class="service-desc">
-                    <p class="service-ttl text-span">
-                        <span>L</span><span>P</span><span>・</span><span>W</span><span>e</span><span>b</span><span>サ</span><span>イ</span><span>ト</span><span>制</span><span>作</span>
-                    </p>
-                    <p class="border"></p>
-                    <div data-aos="fade">
-                        <p class="service-txt">
-                            ウェブページからのCVを上げるために、まずチェックしたいのは、その検索ワードでページに訪れたユーザーに有益な情報を提供できているかどうかです。次に、CTAへ導くまでの流れがテンポ良く、分かりやすく設計されている必要があります。ページデザインは賑やかで活気のあるもの、質実剛健なものなど様々ですが、貴社がどのような姿勢でユーザーと繋がりたいのかが大事だと考えます。
+                    <h3 class="service-ttl text-span" aria-label="ユーザーの「知りたい」に寄り添って">
+                        <span aria-hidden="true">ユ</span><span aria-hidden="true">ー</span><span aria-hidden="true">ザ</span><span aria-hidden="true">ー</span><span aria-hidden="true">の</span><span aria-hidden="true">「</span><span aria-hidden="true">知</span><span aria-hidden="true">り</span><span aria-hidden="true">た</span><span aria-hidden="true">い</span><span aria-hidden="true">」</span><span aria-hidden="true">に</span><span aria-hidden="true">寄</span><span aria-hidden="true">り</span><span aria-hidden="true">添</span><span aria-hidden="true">っ</span><span aria-hidden="true">て</span>
+                    </h3>
+                    <p class="border" aria-hidden="true"></p>
+                    <div class="service-txt" data-aos="fade">
+                        <p>
+                            LP・Webサイトって、ただ「売るための道具」じゃないと思っています。
+                            検索してたどり着いたユーザーには、それぞれ「知りたいこと」「解決したい悩み」があります。
+                        </p>
+                        <p class="block mt-12px">
+                            その気持ちにしっかり寄り添いながら、必要な情報をわかりやすく届ける——それが私たちの考えるWebサイトの役割です。
+                        </p>
+                        <p class="block mt-12px">
+                            迷わず読み進められる導線、思わず「ここに頼みたい」と感じてもらえるデザイン。そして何より、あなたの会社が大切にしていること・ユーザーへの向き合い方が、ちゃんと伝わるサイトを一緒に作りたいと思っています。
+                        </p>
+                        <p class="block mt-12px">
+                            訪れた人の心に残る、そんなWebサイトをご一緒しませんか？
                         </p>
                     </div>
                 </div>
-            </div>
-            <!-- ===== Webサイト改修サービス ===== -->
-            <div class="Web-Operation_sevice" data-aos="fade-up">
-                <div class="cont-in">
-                    <div>
-                        <div class="Web-Operation_bordr">
-                            <h2 class="sec-sub-ttl">Webサイト改修サービス</h2>
-                            <p class="border active"></p>
-                        </div>
-                        <p class="Web-Operation_read">
-                            サイトを設立して時間が経つと<br class="sp">ちょっとした追加機能や変更でも<br>
-                            誰に頼めばよいか分からなくなることも...<br class="sp">shiro Incでは機能別に<br class="sp">単品オーダーを承ります。
-                        </p>
-                    </div>
-                    <div data-aos="fade-up">
-                        <ul class="service-grid">
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_01.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>バナー広告作成</h3>
+            </article>
 
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_02.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>ワードプレス<br>投稿ページ作成</h3>
-
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_03.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>レスポンシブ<br>対応</h3>
-
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_04.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>Google<br>計測タグ設置</h3>
-
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_05.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>フォーム設置</h3>
-
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_06.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>リキャプチャー<br> 設置、更新</h3>
-
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_07.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>ファースト<br class="sp">ビュー改善</h3>
-
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_08.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>多国語対応</h3>
-
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_09.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>Youtube動画作成</h3>
-
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_11.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>SSL設定</h3>
-
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_12.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>Webサイトの<br class="sp">テキスト<br>情報更新・<br class="sp">画像変更</h3>
-
-                                </div>
-                            </li>
-                            <li>
-                                <img src="to_pardot_HP/assets/img/img_operation_13.png" alt="icon">
-                                <div class="service-grid_text">
-                                    <h3>SNS投稿画像・<br>文章作成</h3>
-
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="service-con odd">
+            <!-- Marketing -->
+            <article id="Marketing" class="service-con even">
                 <div class="loop-wrap" data-aos="fade">
                     <div class="loop_txt">
-                        <div>Front end Production</div>
-                        <div>Front end Production</div>
-                        <div>Front end Production</div>
-                        <div>Front end Production</div>
-                        <div>Front end Production</div>
+                        <div>Marketing Support</div>
+                        <div>Marketing Support</div>
+                        <div>Marketing Support</div>
+                        <div>Marketing Support</div>
+                        <div>Marketing Support</div>
                     </div>
                 </div>
-                <a class="service-img" data-aos="fade-up" href="fe.html" target="_blank">
+                <div class="service-desc">
+                    <h3 class="service-ttl text-span" aria-label="ツールに縛られない、あなたのためのマーケティングへ">
+                        <span aria-hidden="true">ツ</span><span aria-hidden="true">ー</span><span aria-hidden="true">ル</span><span aria-hidden="true">に</span><span aria-hidden="true">縛</span><span aria-hidden="true">ら</span><span aria-hidden="true">れ</span><span aria-hidden="true">な</span><span aria-hidden="true">い</span><span aria-hidden="true">、</span><span aria-hidden="true">あ</span><span aria-hidden="true">な</span><span aria-hidden="true">た</span><span aria-hidden="true">の</span><span aria-hidden="true">た</span><span aria-hidden="true">め</span><span aria-hidden="true">の</span><span aria-hidden="true">マ</span><span aria-hidden="true">ー</span><span aria-hidden="true">ケ</span><span aria-hidden="true">テ</span><span aria-hidden="true">ィ</span><span aria-hidden="true">ン</span><span aria-hidden="true">グ</span><span aria-hidden="true">へ</span>
+                    </h3>
+                    <p class="border" aria-hidden="true"></p>
+                    <div class="service-txt" data-aos="fade">
+                        <p>
+                            「このSaaSを使えば解決します」「とりあえず広告とSEOで」——そんな提案に、物足りなさを感じたことはありませんか？
+                        </p>
+                        <p class="block mt-12px">
+                            いま検索の世界は大きく変わっています。GoogleやAIアシスタントが「答え」を直接提示する時代、従来のSEOや広告だけでは届かないユーザーが増えています。私たちはAI検索時代に合わせた最新のアプローチで、あなたのサービスが「選ばれる存在」になるようサポートします。
+                        </p>
+                        <p class="block mt-12px">
+                            大切にしているのは、ツールや手法ありきではなく「あなたのビジネス課題ありき」で考えること。AIエージェントも活用しながら、柔軟に、でも丁寧に。そんな姿勢で一緒に成果を作っていきます。
+                        </p>
+                        <p class="mv-bnr">
+                            <img src="assets/img/partner_logo.png" alt="Salesforce Partner Logo">
+                            <picture>
+                                <source srcset="assets/img/Agentforce.webp" type="image/webp">
+                                <img src="assets/img/Agentforce.png" alt="Agentforce">
+                            </picture>
+                        </p>
+                        <p class="mv-txt-below"><span class="bold">shiro Inc.</span>はSalesforce社の<br>公認コンサルティングパートナーです
+                        </p>
+                    </div>
+                </div>
+                <div class="service-img" data-aos="fade-up">
+                    <a href="ai_marketing_flow.html" target="_blank" rel="noopener noreferrer">
+                        <picture>
+                            <source srcset="assets/img/ai_marketing_hero.webp" type="image/webp">
+                            <img src="assets/img/ai_marketing_hero.png" alt="AIマーケティング・フロー 詳細はこちら">
+                        </picture>
+                    </a>
+                </div>
+            </article>
+
+            <!-- webapp -->
+            <article id="webapp" class="service-con odd">
+                <div class="loop-wrap" data-aos="fade">
+                    <div class="loop_txt">
+                        <div>APP and System</div>
+                        <div>APP and System</div>
+                        <div>APP and System</div>
+                        <div>APP and System</div>
+                        <div>APP and System</div>
+                    </div>
+                </div>
+                <div class="service-img" data-aos="fade-up">
                     <picture>
-                        <!-- WebP用画像 -->
-                        <source srcset="to_pardot_HP/assets/img/img-service-03.webp" type="image/webp">
-                        <!-- 従来画像 -->
-                        <img src="to_pardot_HP/assets/img/img-service-03.jpg" alt="豊洲Smart Eat">
+                        <source srcset="assets/img/img-service-03b.webp" type="image/webp">
+                        <img src="assets/img/img-service-03b.png" alt="WEBアプリ制作のイメージ">
                     </picture>
-                </a>
-                <div class="service-desc">
-                    <p class="service-ttl text-span">
-                        <span>フ</span><span>ロ</span><span>ン</span><span>ト</span><span>エ</span><span>ン</span><span>ド</span><span>制</span><span>作</span>
-                    </p>
-                    <p class="border"></p>
-                    <div data-aos="fade">
-                        <div data-aos="fade">
-                            <p class="service-txt">
-                                既存のCSSフレームワークを使うことで、WebサービスのUIを考える際にコストを抑えつつ、統一感のあるデザインを実現できます。ただし、その反面、個性が出しづらかったり、ページが重くなりがちというデメリットもあります。私たちはサービスの企画段階からUIのプロトタイプを作成し、アジャイル開発でブラッシュアップしながら、ユーザーにとって唯一無二のサービスを立ち上げるお手伝いをします。
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="service-con even">
-                <div class="loop-wrap" data-aos="fade">
-                    <div class="loop_txt">
-                        <div>Marketing Support</div>
-                        <div>Marketing Support</div>
-                        <div>Marketing Support</div>
-                        <div>Marketing Support</div>
-                        <div>Marketing Support</div>
-                    </div>
                 </div>
                 <div class="service-desc">
-                    <p class="service-ttl text-span">
-                        <span>マ</span><span>ー</span><span>ケ</span><span>テ</span><span>ィ</span><span>ン</span><span>グ</span><span>支</span><span>援</span>
-                    </p>
-                    <p class="border"></p>
-                    <div data-aos="fade">
-                        <p class="service-txt">
-                            私たちはセールスフォース社の認定コンサルティングパートナーとして貴社のマーケティング戦略をサポートします。デマンドが発生した時に最初に思い出してもらえるように顧客と常に良いコミュニケーションを保ち、ブランドの信頼を高めることでクロスセル・アップセルにつなげる仕組みを作りましょう。
+                    <h3 class="service-ttl text-span" aria-label="ビジネスの「やりたい」を、一緒に形にします">
+                        <span aria-hidden="true">ビ</span><span aria-hidden="true">ジ</span><span aria-hidden="true">ネ</span><span aria-hidden="true">ス</span><span aria-hidden="true">の</span><span aria-hidden="true">「</span><span aria-hidden="true">や</span><span aria-hidden="true">り</span><span aria-hidden="true">た</span><span aria-hidden="true">い</span><span aria-hidden="true">」</span><span aria-hidden="true">を</span><span aria-hidden="true">、</span><span aria-hidden="true">一</span><span aria-hidden="true">緒</span><span aria-hidden="true">に</span><span aria-hidden="true">形</span><span aria-hidden="true">に</span><span aria-hidden="true">し</span><span aria-hidden="true">ま</span><span aria-hidden="true">す</span>
+                    </h3>
+                    <p class="border" aria-hidden="true"></p>
+                    <div class="service-txt" data-aos="fade">
+                        <p>
+                            「アプリ開発って、時間もお金もかかりそう…」そんな不安を抱えていませんか？
+                            私たちはAIコーディング技術を活用することで、これまで数ヶ月かかっていた開発を大幅に短縮。業務効率化のアプリも、新しいサービスのリリースも、もっと身近なものにできるようになりました。
+                        </p>
+                        <p class="block mt-12px">
+                            難しい技術的な話は私たちにお任せください。お客様には「こんなことで困っている」「こんなサービスを届けたい」という想いを聞かせていただくだけで大丈夫です。その想いを形にするのが、私たちの仕事です。
+                        </p>
+                        <p class="block mt-12px">
+                            「何から相談すればいいかわからない」という方も、ぜひお気軽に声をかけてください。一緒に考えるところから始めましょう。
                         </p>
                     </div>
                 </div>
-                <a class="service-img" data-aos="fade-up" href="ae.html" target="_blank">
-                    <div class="feature-video-wrap">
-                        <div class="video-wrap">
-                            <video autoplay="" loop="" muted="" playsinline="" preload=""
-                                src="to_pardot_HP/assets/img/mov_feature.mp4"></video>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
+            </article>
         </section>
-        <!-- ===== service ===== -->
 
-        <!-- ===== works ===== -->
-        <section class="sec-works" id="works">
-            <h2 class="sec-ttl text-span" data-aos="fade-up">
-                <span>W</span><span>o</span><span>r</span><span>k</span><span>s</span>
+        <!-- Works Section -->
+        <section id="works" class="sec-works">
+            <h2 class="sec-ttl text-span" data-aos="fade-up" aria-label="Works">
+                <span aria-hidden="true">W</span><span aria-hidden="true">o</span><span aria-hidden="true">r</span><span aria-hidden="true">k</span><span aria-hidden="true">s</span>
             </h2>
             <div class="works-con">
                 <div data-aos="fade-up">
                     <div class="works-slide">
                         <p>
-                            <span>
-                                <picture>
-                                    <!-- WebP用画像 -->
-                                    <source srcset="to_pardot_HP/assets/img/img-works-01.webp" type="image/webp">
-                                    <!-- 従来画像 -->
-                                    <img src="to_pardot_HP/assets/img/img-works-01.jpg" alt="PAYCIERGE">
-                                </picture>
-                            </span>
-                        </p>
-                        <p><span>
-                                <picture>
-                                    <!-- WebP用画像 -->
-                                    <source srcset="to_pardot_HP/assets/img/img-works-02.webp" type="image/webp">
-                                    <!-- 従来画像 -->
-                                    <img src="to_pardot_HP/assets/img/img-works-02.jpg" alt="TIS">
-                                </picture>
-                            </span>
-                        </p>
-                        <p><span>
-                                <picture>
-                                    <!-- WebP用画像 -->
-                                    <source srcset="to_pardot_HP/assets/img/img-works-03.webp" type="image/webp">
-                                    <!-- 従来画像 -->
-                                    <img src="to_pardot_HP/assets/img/img-works-03.jpg" alt="豊洲スマートシティ">
-                                </picture>
-                            </span>
+                            <picture>
+                                <source srcset="assets/img/img-works-01.webp" type="image/webp">
+                                <img src="assets/img/img-works-01.jpg" alt="PAYCIERGE | shiro Inc. 制作実績">
+                            </picture>
                         </p>
                         <p>
-                            <span>
-                                <picture>
-                                    <!-- WebP用画像 -->
-                                    <source srcset="to_pardot_HP/assets/img/img-works-04.webp" type="image/webp">
-                                    <!-- 従来画像 -->
-                                    <img src="to_pardot_HP/assets/img/img-works-04.jpg" alt="PAYCIERGE">
-                                </picture>
-                            </span>
+                            <picture>
+                                <source srcset="assets/img/img-works-02.webp" type="image/webp">
+                                <img src="assets/img/img-works-02.jpg" alt="TIS | shiro Inc. 制作実績">
+                            </picture>
                         </p>
-                        <p><span>
-                                <picture>
-                                    <!-- WebP用画像 -->
-                                    <source srcset="to_pardot_HP/assets/img/img-works-05.webp" type="image/webp">
-                                    <!-- 従来画像 -->
-                                    <img src="to_pardot_HP/assets/img/img-works-05.jpg" alt="井筒屋">
-                                </picture>
-                            </span>
+                        <p>
+                            <picture>
+                                <source srcset="assets/img/img-works-03.webp" type="image/webp">
+                                <img src="assets/img/img-works-03.jpg" alt="豊洲スマートシティ | shiro Inc. 制作実績">
+                            </picture>
                         </p>
-                        <p><span>
-                                <picture>
-                                    <!-- WebP用画像 -->
-                                    <source srcset="to_pardot_HP/assets/img/img-works-06.webp" type="image/webp">
-                                    <!-- 従来画像 -->
-                                    <img src="to_pardot_HP/assets/img/img-works-06.jpg" alt="Hakuto">
-                                </picture>
-                            </span>
+                        <p>
+                            <picture>
+                                <source srcset="assets/img/img-works-04.webp" type="image/webp">
+                                <img src="assets/img/img-works-04.jpg" alt="PAYCIERGE 02 | shiro Inc. 制作実績">
+                            </picture>
                         </p>
-                        <p><span>
-                                <picture>
-                                    <!-- WebP用画像 -->
-                                    <source srcset="to_pardot_HP/assets/img/img-works-07.webp" type="image/webp">
-                                    <!-- 従来画像 -->
-                                    <img src="to_pardot_HP/assets/img/img-works-07.jpg" alt="STRUC">
-                                </picture>
-                            </span>
+                        <p>
+                            <picture>
+                                <source srcset="assets/img/img-works-05.webp" type="image/webp">
+                                <img src="assets/img/img-works-05.jpg" alt="井筒屋 | shiro Inc. 制作実績">
+                            </picture>
+                        </p>
+                        <p>
+                            <picture>
+                                <source srcset="assets/img/img-works-06.webp" type="image/webp">
+                                <img src="assets/img/img-works-06.jpg" alt="Hakuto | shiro Inc. 制作実績">
+                            </picture>
+                        </p>
+                        <p>
+                            <picture>
+                                <source srcset="assets/img/img-works-07.webp" type="image/webp">
+                                <img src="assets/img/img-works-07.jpg" alt="STRUC | shiro Inc. 制作実績">
+                            </picture>
                         </p>
                     </div>
                 </div>
             </div>
-            <!-- <a href="#" class="btn-black js-modal-open" data-target="modal01"> <span>詳しい制作実績はこちら</span> </a> -->
 
             <div class="client-con">
-                <h3 class="text-span">
-                    <span>C</span><span>l</span><span>i</span><span>e</span><span>n</span><span>t</span>
+                <h3 class="text-span" aria-label="Client">
+                    <span aria-hidden="true">C</span><span aria-hidden="true">l</span><span aria-hidden="true">i</span><span aria-hidden="true">e</span><span aria-hidden="true">n</span><span aria-hidden="true">t</span>
                 </h3>
                 <p class="border"></p>
                 <div class="client-img">
                     <div class="client-loop"></div>
                 </div>
-                <p class="border2"></p>
+                <p class="border2" aria-hidden="true"></p>
             </div>
         </section>
-        <!-- ===== works ===== -->
 
-        <!-- ===== company ===== -->
-        <section class="sec-company" id="company">
-            <h2 class="sec-ttl text-span" data-aos="fade-up">
-                <span>C</span><span>o</span><span>m</span><span>p</span><span>a</span><span>n</span><span>y</span>
+        <!-- Company Section -->
+        <section id="company" class="sec-company">
+            <h2 class="sec-ttl text-span" data-aos="fade-up" aria-label="Company">
+                <span aria-hidden="true">C</span><span aria-hidden="true">o</span><span aria-hidden="true">m</span><span aria-hidden="true">p</span><span aria-hidden="true">a</span><span aria-hidden="true">n</span><span aria-hidden="true">y</span>
             </h2>
             <div class="company-con">
                 <dl>
                     <dt>社名</dt>
-                    <dd>：株式会社 shiro（shiro.inc）</dd>
+                    <dd>：shiro Inc.</dd>
                     <dt>設立</dt>
                     <dd>：2011年 美大卒業メンバーで会社設立</dd>
                     <dt>代表取締役社長</dt>
                     <dd>：保田裕紀子</dd>
-                    <dt>代表取締役CMO</dt>
-                    <dd>：鈴木隆弥</dd>
                     <dt>執行役員CTO</dt>
                     <dd>：大林亜沙美</dd>
                     <dt>オフィス</dt>
-                    <dd>：〒102-0071 東京都千代田区富士見<br class="sp">1-3-10 CF1310 1F</dd>
-                    <dt>従業員数</dt>
-                    <dd>：8名</dd>
-                    <dt>資本金</dt>
-                    <dd>：2,000,000円</dd>
+                    <dd>：〒102-0071 東京都千代田区富士見1-3-10 CF1310 1F</dd>
+                    <dt>電話番号</dt>
+                    <dd>：03-6272-4119</dd>
                     <dt>事業内容</dt>
-                    <dd>：ウェブサイト制作・ランディングページ制作・<br class="pc">フロントエンド制作</dd>
-
+                    <dd>：ウェブコンテンツ制作｜ウェブマーケティング施策</dd>
                 </dl>
                 <div class="company-map" data-aos="fade-left">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12960.530095712458!2d139.7463174!3d35.6983563!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d7d6c57a093%3A0xdd155a604442072e!2sshiro%20Inc!5e0!3m2!1sja!2sjp!4v1688379964175!5m2!1sja!2sjp"
-                        width="" height="" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="100%" height="450" allowfullscreen loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
-        <!-- ===== company ===== -->
-
-        <!-- ===== CV ===== -->
-        <!--　<section class="sec-cv" id="contact">
-                <p class="contact-btn"><a href="#" class="btn-black js-modal-open"
-                        data-target="modal03"><span>Contact</span></a></p>
-                <p class="cv-left"></p>
-                <p class="cv-right"></p>
-            </section>　-->
-        <!-- ===== CV ===== -->
-
-        <!-- ===== modal01 ===== -->
-        <div class="modal js-modal" id="modal01">
-            <div class="modal-overlay">
-                <div class="modal-con">
-                    <a class="modal-close" href="#"><span class="close_btn"></span></a>
-                    <form class="cv-form" id="form_results"
-                        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D2r000000Eqa0"
-                        method="POST">
-                        <!-- reCAPTCHA -->
-                        <input id="recaptcha-token" name="recaptcha_token" type="hidden" />
-                        <!-- reCAPTCHA -->
-
-                        <p>下記のフォームにご記入いただいた<br class="sp" />
-                            メールアドレスに<br />
-                            制作実績ページのURLとID、<br />
-                            パスワードをお送りいたします。</p>
-
-                        <dl>
-                            <dt><label>お名前</label></dt>
-                            <dd><input type="text" class="name" name="last_name" required></dd>
-                        </dl>
-
-                        <dl>
-                            <dt><label>会社名</label></dt>
-                            <dd><input type="text" name="company" class="company" required></dd>
-                        </dl>
-
-                        <dl>
-                            <dt><label>メールアドレス</label></dt>
-                            <dd><input type="email" name="email" class="email" required></dd>
-                        </dl>
-                        <input type=hidden name="oid" value="00D2r000000Eqa0">
-                        <input type=hidden name="retURL" value="https://go.shiro-k.jp/HP/thanks">
-                        <input class="submit-btn" type="submit" value="送信" />
-                        <p class="mt20">お急ぎの方はページ右下のチャットより<br class="sp">お願いします。</p>
-                    </form>
-                    <a class="modal-close" href="#"><span class="close_btn"></span></a>
-                </div>
-            </div>
-        </div>
-        <!-- ===== end modal01 ===== -->
-
-        <!-- ===== modal02 ===== -->
-        <div id="modal02" class="modal js-modal">
-            <div class="modal-overlay">
-                <div class="modal-con">
-                    <form class="cv-form" id="form_kakaku"
-                        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D2r000000Eqa0"
-                        method="POST">
-                        <!-- reCAPTCHA -->
-                        <input id="recaptcha-token" name="recaptcha_token" type="hidden" />
-                        <!-- reCAPTCHA -->
-
-                        <p>下記のフォームにご記入いただいた<br class="sp">メールアドレスに<br>標準価格表ページのURLをお送りいたします。</p>
-                        <dl>
-                            <dt><label>お名前</label></dt>
-                            <dd><input type="text" class="name" name="last_name" required></dd>
-                        </dl>
-                        <dl>
-                            <dt><label>会社名</label></dt>
-                            <dd><input type="text" name="company" class="company" required></dd>
-                        </dl>
-                        <dl>
-                            <dt><label>メールアドレス</label></dt>
-                            <dd><input type="email" name="email" class="email" required></dd>
-                        </dl>
-                        <input type=hidden name="oid" value="00D2r000000Eqa0">
-                        <input type=hidden name="retURL" value="https://go.shiro-k.jp/HP/thanks">
-                        <input type="submit" class="submit-btn" value="送信">
-                    </form>
-
-                    <a class="modal-close" href="#"><span class="close_btn"></span></a>
-                </div>
-            </div>
-        </div>
-        <!-- ===== modal02 ===== -->
-
-        <!-- ===== modal03 ===== -->
-        <div id="modal03" class="modal js-modal">
-            <div class="modal-overlay">
-                <div class="modal-con">
-                    <form class="cv-form" id="form_toi"
-                        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00D2r000000Eqa0"
-                        method="POST">
-                        <!-- reCAPTCHA -->
-                        <input id="recaptcha-token" name="recaptcha_token" type="hidden" />
-                        <!-- reCAPTCHA -->
-
-                        <p>下記フォームからお問い合わせください。</p>
-                        <dl>
-                            <dt><label>お名前</label></dt>
-                            <dd><input type="text" name="last_name" class="name" required></dd>
-                        </dl>
-                        <dl>
-                            <dt><label>会社名</label></dt>
-                            <dd><input type="text" name="company" class="company" required></dd>
-                        </dl>
-                        <dl>
-                            <dt><label>メールアドレス</label></dt>
-                            <dd><input type="email" name="email" class="email" required></dd>
-                        </dl>
-                        <dl>
-                            <dt>
-                                <label class="field-label">お問い合わせ内容</label>
-                            </dt>
-                            <dd class="arrow">
-                                <select name="sosinmokuteki" class="content" required>
-                                    <option disabled selected>選択してください</option>
-                                    <option value="LP・Webサイト制作">LP・Webサイト制作</option>
-                                    <option value="フロントエンド制作">フロントエンド制作</option>
-                                    <option value="セールスフォース製品について">セールスフォース製品について</option>
-                                </select>
-                            </dd>
-                        </dl>
-                        <input type="submit" class="submit-btn" value="送信">
-                        <input type=hidden name="oid" value="00D2r000000Eqa0">
-                        <input type=hidden name="retURL" value="https://go.shiro-k.jp/HP/thanks">
-                        <p class="mt20">お急ぎの方はページ右下のチャットより<br class="sp">お願いします。</p>
-                    </form>
-                    <a class="modal-close" href="#"><span class="close_btn"></span></a>
-                </div>
-            </div>
-
-        </div>
-        <!-- ===== modal03 ===== -->
 
     </main>
 
-    <!-- ===== footer===== -->
     <footer id="footer">
         <div class="footer-in">
-            <p class="footer-sdgs"><img src="to_pardot_HP/assets/img/img-sdgs.jpg" alt="5 ジェンダー平等を実現しよう">
-            </p>
-            <div>
+            <aside class="footer-sdgs">
+                <img src="assets/img/img-sdgs.jpg" alt="SDGs 5: ジェンダー平等を実現しよう">
+            </aside>
+            <div class="footer-copy">
                 <p class="footer-thanks">Thank you for your reading to bottom</p>
-                <p class="s-txt">We absolutely support SDGs 5.5 as below<br>Ensure women’s full and effective
-                    participation and equal opportunities for leadership <br>at all levels of decision-making in
-                    political, economic and public life.</p>
-                <a href="pp.html" class="privacy is-imghover">ー Privacy Policy</a>
+                <div class="s-txt">
+                    <p>We absolutely support SDGs 5.5 as below</p>
+                    <p>Ensure women’s full and effective participation and equal opportunities for leadership at all
+                        levels of decision-making in political, economic and public life.</p>
+                </div>
+                <nav>
+                    <a href="pp.html" class="privacy is-imghover">ー Privacy Policy</a>
+                </nav>
             </div>
         </div>
-
     </footer>
-    <!-- ===== footer===== -->
 
-    <script type="text/javascript" src="to_pardot_HP/assets/js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="to_pardot_HP/assets/js/common.js"></script>
-    <script type="text/javascript" src="to_pardot_HP/assets/js/slick.min.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Scripts -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         $(function () {
-            /*--------------------------------
-                スライドショー
-            ---------------------------------*/
             $('.mv-slide').slick({
                 fade: true,
                 autoplay: true,
@@ -791,8 +555,6 @@
             });
         });
 
-    </script>
-    <script>
         $(window).on('load', function () {
             AOS.refresh();
         });
@@ -807,7 +569,7 @@
         });
     </script>
 
-
+    <!-- Chat Bot -->
     <script src="https://embed.small.chat/T01MLL8ECKCC06SWG53XNZ.js" async></script>
 </body>
 
