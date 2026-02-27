@@ -11,6 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
+
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
@@ -18,12 +21,15 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -p 10022 ${{ secrets.XSERVER_HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy via rsync
+      - name: Deploy via SFTP
         run: |
-          rsync -avz --delete \
-            --exclude='.git' \
-            --exclude='OLD/' \
-            --exclude='.github/' \
-            --exclude='.DS_Store' \
-            -e "ssh -i ~/.ssh/deploy_key -p 10022 -o StrictHostKeyChecking=no" \
-            ./ ${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }}:${{ secrets.XSERVER_DEPLOY_PATH }}/
+          lftp -e "
+            set sftp:connect-program 'ssh -i ~/.ssh/deploy_key -p 10022 -o StrictHostKeyChecking=no';
+            open sftp://${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }};
+            mirror -R --delete \
+              --exclude-glob='.git*' \
+              --exclude-glob='OLD/' \
+              --exclude-glob='.github/' \
+              --exclude-glob='.DS_Store' \
+              ./ ${{ secrets.XSERVER_DEPLOY_PATH }}/;
+            quit"
