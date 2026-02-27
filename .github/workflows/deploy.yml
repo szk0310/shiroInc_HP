@@ -11,25 +11,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup SSH key and debug
+      - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
-          echo "=== Key file info ==="
-          wc -l ~/.ssh/deploy_key
-          head -1 ~/.ssh/deploy_key
-          tail -1 ~/.ssh/deploy_key
-          echo "=== Public key from private key ==="
-          ssh-keygen -y -f ~/.ssh/deploy_key || echo "FAILED to read key"
 
-      - name: Test SSH connection verbose
+      - name: Test SSH connection (full verbose)
         run: |
           ssh -vvv -i ~/.ssh/deploy_key \
             -p 10022 \
             -o StrictHostKeyChecking=no \
             -o UserKnownHostsFile=/dev/null \
             -o BatchMode=yes \
-            -o ConnectTimeout=10 \
+            -o ConnectTimeout=15 \
             ${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }} \
-            "echo SSH_WORKS" 2>&1 | head -80 || true
+            "echo SSH_WORKS_FROM_ACTIONS" 2>&1 || echo "SSH exit code: $?"
