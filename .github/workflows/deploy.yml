@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install lftp
-        run: sudo apt-get install -y lftp
+      - name: Remove unnecessary files
+        run: rm -rf OLD/ .github/ node_modules/ src/ .gitignore
 
       - name: Setup SSH key
         run: |
@@ -20,18 +20,24 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
-      - name: Deploy via lftp SFTP
-        run: |
-          REMOTE="${{ secrets.XSERVER_DEPLOY_PATH }}"
-          lftp -c "
-            set sftp:connect-program 'ssh -a -x -i $HOME/.ssh/deploy_key -p 10022 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
-            open sftp://${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }};
-            mirror --reverse --verbose --exclude='\.DS_Store' assets/ ${REMOTE}/assets/;
-            put index.html -o ${REMOTE}/index.html;
-            put ae.html -o ${REMOTE}/ae.html;
-            put fe.html -o ${REMOTE}/fe.html;
-            put ai_marketing_flow.html -o ${REMOTE}/ai_marketing_flow.html;
-            put pp.html -o ${REMOTE}/pp.html;
-            put thanks.html -o ${REMOTE}/thanks.html;
-            bye
-          "
+      - name: Deploy assets via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.XSERVER_USER }}
+          server: ${{ secrets.XSERVER_HOST }}
+          port: 10022
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: './assets'
+          remote_path: ${{ secrets.XSERVER_DEPLOY_PATH }}/assets
+          sftp_only: true
+
+      - name: Deploy HTML files via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+          username: ${{ secrets.XSERVER_USER }}
+          server: ${{ secrets.XSERVER_HOST }}
+          port: 10022
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: './*.html'
+          remote_path: ${{ secrets.XSERVER_DEPLOY_PATH }}
+          sftp_only: true
