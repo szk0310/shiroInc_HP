@@ -28,7 +28,7 @@ jobs:
           lftp -c "
             set sftp:connect-program 'ssh -a -x -i $HOME/.ssh/deploy_key -p 10022 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
             open sftp://${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }};
-            mirror --reverse --delete --verbose \
+            mirror --reverse --verbose \
               --exclude='^\.git/' \
               --exclude='\.DS_Store' \
               . ${{ secrets.XSERVER_DEPLOY_PATH }}/;
