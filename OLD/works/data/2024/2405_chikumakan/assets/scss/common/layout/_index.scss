@@ -1,0 +1,13 @@
+@use "../config" as *;
+
+@forward "body";
+
+@forward "header";
+
+@forward "gnav";
+
+@forward "breadcrumbs";
+
+@forward "sidebar";
+
+@forward "footer";

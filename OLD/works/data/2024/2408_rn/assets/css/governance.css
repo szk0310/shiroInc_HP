@@ -1,0 +1,92 @@
+@charset "UTF-8";
+/* common style
+---------------------------------------------------------------------------- */
+.sec-image{
+    width:470px;
+    margin:5% auto;
+}
+.sec-image.left{
+	margin: 5% auto 5% 0;
+}
+.list-num li p{
+    display: flex;
+    align-items: center;
+}
+.list-num li span.num-in{ margin:0 5px;}
+
+.flex-box{
+	justify-content: space-between;
+}
+
+.flex-box .sec-txt{
+	width:60%;
+	margin: 0
+}
+.flex-box .sec-image{
+	width:35%;
+	margin: 0
+}
+#governance3 .flex-box .sec-txt{
+	width:48%;
+	margin: 0
+}
+#governance3 .flex-box .sec-image{
+	width:50%;
+	margin: 0
+}
+@media screen and (max-width: 768px) {
+	.sec-image{
+        width:100%;
+        margin:5vw auto;
+    }
+	.flex-box .sec-txt{
+		width:100%;
+		margin: 0
+	}
+	.flex-box .sec-image{
+		width:100%;
+		padding: 4vw 20%;
+		margin: 0
+	}
+	#governance3 .flex-box .sec-txt{
+		width:100%;
+		margin: 0
+	}
+	#governance3 .flex-box .sec-image{
+		width:100%;
+		padding: 4vw 10% 0 ;
+		margin: 0
+	}
+
+}
+
+/* html コーポレートガバナンス
+---------------------------------------------------------------------------- */
+@media screen and (max-width: 768px) {
+#governance1 .mv>h1 .mv-ja{font-size:3.7vw;}
+}
+
+/* html2 コンプライアンス
+---------------------------------------------------------------------------- */
+#governance2 .mv>h1 .mv-ja{
+    letter-spacing: -0.4rem;
+}
+@media screen and (max-width: 768px) {
+    #governance2 .mv>h1 .mv-ja{
+        font-size:3.7vw;
+        letter-spacing: -0.15rem;
+    }
+}
+
+/* html3 リスクマネジメント
+---------------------------------------------------------------------------- */
+#governance3 .mv>h1 .mv-ja{
+    letter-spacing: -0.6rem;
+}
+@media screen and (max-width: 768px) {
+    #governance3 .mv>h1 .mv-ja{
+        font-size:3.7vw;
+        letter-spacing:0;
+    }
+}
+

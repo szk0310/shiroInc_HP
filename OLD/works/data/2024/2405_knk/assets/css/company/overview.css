@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/* ------------------------------------------------
+                   会社概要
+--------------------------------------------------- */
+
+.bg-overview {
+	background: url("../../img/company/overview/bg_contents.png") center center no-repeat;
+	background-size: cover;
+}
+
+/*---------- メッセージ ----------*/
+.sec-message {
+	padding: 20px 0 75px;
+}
+.sec-message .flex-box {
+	align-items: flex-start;
+}
+.sec-message .flex-box .box-left {
+	width: 40%;
+	position: relative;
+	z-index: 1;
+}
+.sec-message .flex-box .box-right {
+	width: 65%;
+	margin: 10% 0 0 -5%;
+	padding: 60px;
+	background: url("../../img/company/overview/bg_txt.png") center center no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 2;
+	color: #fff;
+}
+.sec-message .message-ttl {
+	margin-bottom: 40px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 30px;
+	font-weight: 500;
+}
+.sec-message .message-txt {
+	margin-bottom: 30px;
+	font-size: 18px;
+	line-height: 1.8;
+}
+.sec-message .message-signature {
+	font-size: 20px;
+	text-align: right;
+}
+
+@media (max-width: 768px) {
+	.sec-message {
+		padding: 4vw 0 12vw;
+	}
+	.sec-message .flex-box {
+		display: block;
+	}
+	.sec-message .flex-box .box-left {
+		width: 80%;
+		position: relative;
+		z-index: 1;
+	}
+	.sec-message .flex-box .box-right {
+		width: 95%;
+		margin: -10vw 0 0 auto;
+		padding: 8vw;
+	}
+	.sec-message .message-ttl {
+		margin-bottom: 5vw;
+		font-size: 5.2vw;
+	}
+	.sec-message .message-txt {
+		margin-bottom: 4vw;
+		font-size: 3.4vw;
+	}
+	.sec-message .message-signature {
+		font-size: 3.6vw;
+	}
+    
+}
+
+
+/*---------- 会社概要 ----------*/
+.sec-overview {
+	padding: 0 0 70px;
+}
+.sec-overview .overview-wrap {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 50px;
+	border: 1px solid #081F5C;
+	background: #fff;
+}
+.sec-overview .overview-wrap dl {
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	display: flex;
+	border-bottom: 1px solid #D8DADF;
+}
+.sec-overview .overview-wrap dl:first-child {
+	border-top: 1px solid #D8DADF;
+}
+.sec-overview .overview-wrap dl dt {
+	width: 225px;
+	padding: 20px 10px;
+	font-weight: bold;
+}
+.sec-overview .overview-wrap dl dd {
+	width: calc(100% - 225px);
+	padding: 20px 10px;
+}
+
+@media (max-width: 768px) {
+	.sec-overview {
+		padding: 0 0 12vw;
+	}
+	.sec-overview .overview-wrap {
+		width: 100%;
+		padding: 8vw 5vw;
+		border: 1px solid #081F5C;
+		background: #fff;
+	}
+	.sec-overview .overview-wrap dl {
+		display: block;
+	}
+	.sec-overview .overview-wrap dl dt {
+		width: 100%;
+		padding: 4vw 2vw 1vw;
+	}
+	.sec-overview .overview-wrap dl dd {
+		width: 100%;
+		padding: 2vw 2vw 4vw;
+	}
+    
+}

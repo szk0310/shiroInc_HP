@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+@use '../common/config' as *;
+
+
+/* MV
+---------------------------------------------------------------------------- */
+.p-sec-mv { 
+	width: 100%;
+	padding: rem(245) 0 rem(272);
+	background: url("../../images/clubwyndham/img_mv_pc.jpg") center center no-repeat;
+	background-size: cover;
+}
+
+.p-mv-ttl {
+	width: 100%;
+	position: relative;
+	z-index: 2;
+}
+
+.p-mv-ttl-ja {
+	color: #fff;
+	@include fz(28,62,200,600);
+	text-shadow: 5px 5px 3px rgba(0,0,0,0.16);
+}
+
+
+@media screen and (max-width: #{$breakpoint}px){
+	
+	.p-sec-mv { 
+		width: 100%;
+		padding: vw(100) 0 vw(570);
+		background: url("../../images/clubwyndham/img_mv_sp.jpg") center center no-repeat;
+		background-size: cover;
+		position: relative;
+	}
+
+	.p-mv-ttl {
+		width: 100%;
+		color: #fff;
+		opacity: 0.85;
+		display: block;
+		position: relative;
+		z-index: 2;
+	}
+
+	.p-mv-ttl-ja {
+		display: block;
+		@include spfz(36);
+	}
+
+}
+
+
+
+/* メインコンテンツ
+---------------------------------------------------------------------------- */
+.p-sec-clubwyndham {
+	width: 100%;
+	padding: rem(146) 0 0;
+}
+
+
+.p-contents-box {
+	width: 100%;
+	position: relative;
+	@include flex(between,start,nowrap,center);
+	
+	&.last {
+		flex-direction: row-reverse;
+		@include flex(between,center,nowrap,center);
+	}
+}
+
+.p-contents-img {
+	width: 50%;
+}
+
+.p-contents-txt {
+	width: calc(50% - rem(70));
+	@include fz(14,25,100,400);
+}
+
+.p-link-clubwyndhamasia {
+	width: 90%;
+	max-width: 450px;
+	margin: rem(126) auto rem(100);
+	padding: rem(27) 0;
+	display: block;
+	background: #E3E3E3;
+	color: #707070;
+	text-align: center;
+	@include fz(18,28,0,700);
+	transition: .3s;
+	
+	&:hover {
+		background: #000;
+		color: #fff;
+	}
+}
+
+@media screen and (max-width: #{$breakpoint}px){
+	.p-sec-clubwyndham {
+		width: 100%;
+		padding: vw(70) 0 0;
+	}
+
+
+	.p-contents-box {
+		width: 100%;
+		margin-bottom: vw(80);
+		flex-direction: column;
+
+		&.last {
+			margin-bottom: vw(60);
+			flex-direction: column;
+		}
+	}
+
+	.p-contents-img {
+		width: 100%;
+		margin-bottom: vw(40);
+	}
+
+	.p-contents-txt {
+		width: 100%;
+		@include spfz(30);
+	}
+
+	.p-link-clubwyndhamasia {
+		width: 100%;
+		max-width: 450px;
+		margin: 0 auto vw(60);
+		padding: vw(40) 0;
+		@include spfz(28);
+	}
+}
+
+	
+
+

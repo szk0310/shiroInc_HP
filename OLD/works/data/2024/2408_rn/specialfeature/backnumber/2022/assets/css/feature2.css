@@ -1,0 +1,411 @@
+@charset "UTF-8";
+/* CSS Document */
+@media screen and (max-width: 768px) {
+.h2-wrap{flex-direction: row}
+}
+/*------------------------------------------------------------------------------------------------
+    feature2
+--------------------------------------------------------------------------------------------------*/
+.main-wrap .sec-inn-s .article-wrap .lead-wrap{
+	font-size:1.7rem;
+	font-weight: 500;
+	line-height: 3
+}
+.main-wrap .sec-inn-s .article-wrap .lead-wrap .h3-wrap{
+	position: relative;
+	padding-left: 210px;
+	margin-bottom: 10px
+}
+.main-wrap .sec-inn-s .article-wrap .lead-wrap .h3-wrap h3{
+	padding-bottom: 0
+}
+.main-wrap .sec-inn-s .article-wrap .lead-wrap p.frameline{
+	position: absolute;
+	white-space: nowrap;
+	width:200px;
+	height:58px;
+	margin-right: 10px;
+	border:5px #477740 solid;
+	border-radius:29px;
+	font-size:1.3rem;
+	font-weight: 600;
+	top:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+.main-wrap .sec-inn-s .article-wrap .lead-wrap .lead-txt{
+	font-size:2.8rem;
+	font-weight: 600;
+	color: #477740
+}
+.main-wrap .sec-inn-s .article-wrap .article-item{
+	margin-top: 80px
+}
+
+
+.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap{
+	margin-bottom: 40px;
+	position: relative
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap p.frameline{
+	position: absolute;
+	white-space: nowrap;
+	width:58px;
+	height:58px;
+	margin-right: 10px;
+	border:5px #477740 solid;
+	border-radius:29px;
+	font-size:1.3rem;
+	font-weight: 600;
+	top:0;
+	bottom:0;
+	left:0;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap.wide p.frameline{
+	width:120px;
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap >div{
+	margin-left: 68px
+
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap.wide >div{
+	margin-left: 130px
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap >div span{
+	font-size:1.0rem;
+	width:100%
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .txt1{
+	line-height: 3;
+	font-weight: 400;
+}
+
+
+.main-wrap .sec-inn-s .article-wrap .article-item .step-wrap{
+	display: flex;
+	justify-content: space-between;
+	padding:40px 0 65px;
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .step-wrap .wrap-inn{
+	width:calc((100% - 5.0%) / 3);
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .step-wrap .wrap-inn .wrap-inn-img{
+	position: relative
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .step-wrap .wrap-inn .txt-no{
+	position: absolute;
+	content:'';
+	width:40px;
+	height:40px;
+	border-radius: 50%;
+	background: #9dc138;
+	color:#fff;
+	top:-20px;
+	left:0;
+	right:0;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size:2.5rem;
+	font-weight: 400;
+	
+}
+
+
+.main-wrap .sec-inn-s .article-wrap .article-item .wrap-inn .wrap-inn-ttl{
+	font-size:2.2rem;
+	font-weight: 600;
+	margin: 1em 0 0.5em
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .wrap-inn .wrap-inn-txt{
+	font-size:1.2rem;
+	font-weight: 400;
+	line-height: 2;
+	letter-spacing: 0
+
+}
+
+
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap{padding-bottom: 70px}
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table{
+	width:100%;
+	border:none;
+	border-collapse: collapse;
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table th{
+	white-space: nowrap
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table th,
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table td{
+
+	font-size:1.2rem;
+	padding: 20px 0.5% ;
+	font-feature-settings: "palt";
+	font-family:  sans-serif;
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table thead th{
+	border-bottom:3px solid #000;
+	position: relative;
+	font-weight: 600
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table thead th:not(:first-child)::before{
+	position: absolute;
+	content:'';
+	width:1px;
+	height:1.3rem;
+	background: #000;
+	left:0;
+	top:0;
+	bottom:0;
+	margin: auto
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table tbody th{
+	border-bottom:1px solid #000;
+	border-left:1px solid #000;
+	vertical-align: middle;
+	padding:0 1px
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table td{
+	border-bottom:1px solid #000;
+	border-left:1px solid #000;
+	vertical-align: middle;
+	padding-left:10px;
+	padding-right:10px
+	
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table th.year{
+	border-left:none
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap .note-txt{
+	font-size: 1.0rem;
+	margin-top: 1em
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap .contents-txt{
+	font-weight: 600
+}
+
+.main-wrap .sec-inn-s .article-wrap .article-item .bottom-wrap{
+	display: flex;
+	justify-content: space-between;
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .bottom-wrap .wrap-inn{
+	width:calc((100% - 70px) / 2);
+	position: relative
+}
+
+.main-wrap .sec-inn-s .article-wrap .article-item .bottom-wrap .btn-more{
+	width:calc(100% - 55px);
+	max-width: inherit;
+	margin: 1em 0 0 auto;
+
+	
+}
+.main-wrap .sec-inn-s .article-wrap .article-item .bottom-wrap .btn-more a{
+	background: #9dc138;
+	display: block;
+	padding: 1em 0.5em;
+	width:100%;
+	text-align: center;;
+	line-height: 1;
+	color:#fff;
+	border-radius: 2em;
+	position: relative;
+}
+
+.link-txt{
+	padding-left: 2.5em;
+	position: relative
+}
+.link-txt::before{
+	position: absolute;
+	content:'';
+	width:1.8em;
+	height:100%;
+	background-image: url("/specialfeature/backnumber/2022/assets/img/common/click.svg");
+	background-repeat: no-repeat;
+	background-position: center right;
+	background-size: contain;
+	left:0.5em;
+	top:0;
+	margin: auto
+}
+@media screen and (max-width:1023px) {
+
+
+}
+@media screen and (max-width: 768px) {
+	.main-wrap .sec-inn-s .article-wrap .lead-wrap{
+		font-size:3.8vw;
+		font-weight: 500;
+		line-height: 2
+	}
+	
+	
+.main-wrap .sec-inn-s .article-wrap .lead-wrap .h3-wrap{
+	position: relative;
+	padding-left: 45vw;
+	margin-bottom: 5vw;
+}
+.main-wrap .sec-inn-s .article-wrap .lead-wrap .h3-wrap h3{
+	padding-bottom: 0
+}
+.main-wrap .sec-inn-s .article-wrap .lead-wrap p.frameline{
+	width:43vw;
+}
+	
+	
+	.main-wrap .sec-inn-s .article-wrap .lead-wrap .lead-txt{
+		font-size:4.2vw;
+		font-weight: 600;
+		margin-bottom:1em;
+		color: #477740
+	}
+	
+	.main-wrap .sec-inn-s .article-wrap .article-item{
+		margin-top:10vw
+	}
+
+	.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap{
+		margin-bottom: 5vw;
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap p.frameline{
+		position: absolute;
+		white-space: nowrap;
+		width:12vw;
+		height:12vw;
+		margin-right: 3vw;
+		border:5px #477740 solid;
+		border-radius:6vw;
+		font-size:3vw;
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap.wide p.frameline{
+		width:24vw;
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap >div{
+		margin-left: 14vw
+
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap.wide >div{
+		margin-left: 26vw
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .h4-wrap >div span{
+		font-size:3vw;
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .txt1{
+		line-height: 2.5;
+	}
+	
+	
+	.main-wrap .sec-inn-s .article-wrap .article-item .step-wrap{
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		padding:0 0 8vw;
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .step-wrap .wrap-inn{
+		width:100%;
+		display: flex;
+		justify-content: space-between;
+
+		margin-top: 8vw
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .step-wrap .wrap-inn .wrap-inn-img{
+		width:40%
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .step-wrap .wrap-inn .wrap-txt{
+		width:57%
+	}
+
+	.main-wrap .sec-inn-s .article-wrap .article-item .step-wrap .wrap-inn .txt-no{
+		position: absolute;
+		content:'';
+		width:8vw;
+		height:8vw;
+		border-radius: 50%;
+		background: #9dc138;
+		color:#fff;
+		top:-4vw;
+		left:0;
+		right:0;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size:6vw;
+		font-weight: 400;
+
+	}
+
+	.main-wrap .sec-inn-s .article-wrap .article-item .wrap-inn .wrap-inn-ttl{
+		font-size:4vw;
+		font-weight: 600;
+		margin: -2vw 0 2vw
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .wrap-inn .wrap-inn-txt{
+		font-size:3.2vw;
+		font-weight: 400;
+		line-height: 2;
+		letter-spacing: 0
+
+	}
+
+
+	.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap{padding-bottom: 10vw}
+	.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap .wrap-inn{
+		overflow-x: scroll
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table{
+		white-space: nowrap;
+		width:180vw
+	}	
+	.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table th,
+	.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table td{
+		font-size:3.2vw;
+		padding: 3vw 2vw ;
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table thead th:not(:first-child)::before{
+		height:3vw;
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap table td{
+		padding-left:2vw ;
+		padding-right:2vw 
+
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .schedule-wrap .note-txt{
+		font-size: 3vw;
+	}
+
+	.main-wrap .sec-inn-s .article-wrap .article-item .bottom-wrap{
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .bottom-wrap .wrap-inn{
+		width:94%;
+		margin: 0 auto
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .bottom-wrap .wrap-inn .wrap-inn-img{
+		padding: 0 10% 5vw
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .bottom-wrap .btn-more{
+		width:calc(100% - 15vw);
+		margin: 1em 0 10vw auto
+
+	}
+	.main-wrap .sec-inn-s .article-wrap .article-item .bottom-wrap .btn-more a{
+		font-size: 3.8vw;
+
+	}
+
+}
+
+

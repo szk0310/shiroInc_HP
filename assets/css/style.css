@@ -641,7 +641,7 @@ a.btn-black:after {
   margin: 0 auto;
   width: 70%;
   padding: 80px 0 40px;
-  font-size: 18px !important;
+  font-size: 24px !important;
 }
 
 .mv-txt-below {
@@ -721,6 +721,8 @@ a.btn-black:after {
 
   .mv-txt {
     padding: 16vw 0 5vw;
+    width: 100%;
+    font-size: 4.5vw !important;
   }
 
   .mv-bnr {
@@ -1426,6 +1428,104 @@ a.more-txt {
     height: 15vw;
     background-image: url("../img/img-client-logo.jpg");
     background-size: auto 15vw;
+  }
+}
+
+/*---------- fixed idea logo ----------*/
+.fixed-idea-logo {
+  position: fixed;
+  left: 100px;
+  bottom: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.fixed-idea-logo img {
+  width: 180px;
+  height: auto;
+}
+
+.fixed-idea-logo {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.fixed-idea-logo.is-visible {
+  opacity: 1;
+}
+
+/*---------- faq ----------*/
+.sec-faq {
+  padding: 100px 0;
+}
+
+.faq-con {
+  margin: -10px 0 0 5vw;
+  max-width: 860px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 32px 0;
+}
+
+.faq-item:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.faq-item dt {
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  display: flex;
+  gap: 0.75em;
+  align-items: flex-start;
+}
+
+.faq-item dt::before {
+  content: "Q";
+  color: #f5a302;
+  font-weight: 900;
+  font-family: 'Chillax', sans-serif;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  line-height: 1.6;
+}
+
+.faq-item dd {
+  margin-top: 12px;
+  padding-left: 1.85em;
+  line-height: 1.9;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .sec-faq {
+    padding: 15vw 0;
+  }
+
+  .faq-con {
+    margin: 5vw 0 0 0;
+    padding: 0 5vw;
+  }
+
+  .faq-item {
+    padding: 6vw 0;
+  }
+
+  .faq-item dt {
+    font-size: 3.8vw;
+  }
+
+  .faq-item dd {
+    font-size: 3.4vw;
+    margin-top: 3vw;
   }
 }
 

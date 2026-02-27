@@ -1,0 +1,581 @@
+@charset "UTF-8";
+
+@use '../common/config' as *;
+
+
+/* MV
+---------------------------------------------------------------------------- */
+.p-sec-mv { 
+	width: 100%;
+	position: relative;
+}
+
+.p-mv-ttl {
+	width: 40%;
+	max-width: 360px;
+	position: absolute;
+	top: 13vw;
+	right: 10%;
+	
+	img {
+		width: 100%;
+		max-width: initial;
+	}
+}
+
+@media screen and (max-width: #{$breakpoint}px){
+	.p-sec-mv { 
+		width: 100%;
+	}
+
+	.p-mv-ttl {
+		width: 50%;
+		max-width: initial;
+		background: rgba(0,0,0,0.34);
+		position: absolute;
+		top: 4%;
+		right: 25%;
+	}
+}
+
+
+/* slide
+---------------------------------------------------------------------------- */
+.slide-arrow {
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: calc(50% - 17.5px);
+	z-index: 5;
+	cursor: pointer;
+}
+
+.arrow-prev {
+	background: url("../../images/top/icn_arrow_prev.svg") center center no-repeat;
+	background-size: 100%;
+	left: 10px;
+}
+
+.arrow-next {
+	background: url("../../images/top/icn_arrow_next.svg") center center no-repeat;
+	background-size: 100%;
+	right: 10px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: 40px;
+	left: 5%;
+    display: block;
+    width: 90%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+	text-align: center;
+	z-index: 4;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots li button:before{
+    line-height: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    content: '';
+    text-align: center;
+    opacity: 1;
+    background: #707070;
+	border-radius: 50%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    background: #fff;
+}
+
+@media screen and (max-width: #{$breakpoint}px){
+	.slide-arrow {
+		width: 7vw;
+		height: 7vw;
+		position: absolute;
+		z-index: 5;
+	}
+	
+	.arrow-prev {
+		left: 2vw;
+	}
+	
+	.arrow-next {
+		right: 2vw;
+	}
+
+	.slick-dots {
+		position: absolute;
+		bottom: 5vw;
+		left: 5%;
+		display: block;
+		width: 90%;
+		padding: 0;
+		margin: 0;
+		z-index: 4;
+	}
+	
+	.slick-dots li {
+		width: 2vw;
+		height: 2vw;
+		margin: 0 1vw;
+	}
+	
+	.slick-dots li button {
+		width: 2vw;
+		height: 2vw;
+	}
+	
+	.slick-dots li button:before{
+		width: 2vw;
+		height: 2vw;
+	}
+	
+}
+
+
+
+
+/* リンク
+---------------------------------------------------------------------------- */
+.p-sec-about {
+	width: 100%;
+	padding: 50px 0 90px;
+}
+
+.p-about-txt {
+	@include fz(18.5,32,100,400);
+	text-align: center;
+}
+
+/* 下層ページ導線 横長 */
+.p-about-link-wrap {
+	width: 100%;
+	margin-bottom: rem(55);
+}
+.p-about-link {
+	width: 100%;
+	margin-top: rem(50);
+	padding: rem(25) rem(40) rem(30);
+	display: block;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	
+	&::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		background: rgba(255,255,255,0.2);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		transition: .3s;
+	}
+	&:hover::after {
+		opacity: 1;
+	}
+}
+
+.p-about-link-onsen {
+	background-image: url("../../images/top/img_top_01.jpg");
+}
+
+.p-about-link-cuisine {
+	background-image: url("../../images/top/img_top_02.jpg");
+}
+
+.p-about-link-rooms {
+	background-image: url("../../images/top/img_top_03.jpg");
+}
+
+.p-about-link-facility {
+	background-image: url("../../images/top/img_top_04.jpg");
+}
+
+.p-about-txt-wrap {
+	width: 40%;
+	max-width: rem(220);
+	padding: rem(40) rem(20) rem(30);
+	background: rgba(0,0,0,0.51);
+	border: 1px solid rgba(255,255,255,0.51);
+	position: relative;
+	z-index: 3;
+	transition: .3s;
+	
+	&.is-odd {
+		margin-right: auto;
+		@include flex(start,center,wrap,center);
+		
+		.p-about-link-txt {
+			width: 100%;
+			margin-top: 20px;
+		}
+		.p-about-link-ttl-en {
+			margin-left: 10px;
+		}
+	}
+	
+	&.is-even {
+		margin-left: auto;
+		flex-direction: row-reverse;
+		@include flex(center,start,wrap,center);
+		
+		.p-about-link-txt {
+			margin-right: 16px;
+		}
+		.p-about-link-ttl-en {
+			width: 100%;
+			margin-top: 20px;
+		}
+	}
+}
+
+.p-about-link-onsen:hover .p-about-txt-wrap, 
+.p-about-link-cuisine:hover .p-about-txt-wrap {
+	background: rgba(208,92,92,0.7);
+	border: 1px solid transparent;
+}
+
+.p-about-link-rooms:hover .p-about-txt-wrap, 
+.p-about-link-facility:hover .p-about-txt-wrap {
+	background: rgba(30, 157,50,0.6);
+	border: 1px solid transparent;
+}
+
+.p-about-link:hover .p-about-txt-wrap::after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	border: 2px solid rgba(255,255,255,0.7);
+	position: absolute;
+	top: -2px;
+	left: -2px;
+}
+
+.p-about-link-ttl {
+	@include fz(30,40,200,400);
+}
+.p-about-link-ttl-en {
+	@include fz(12,14,300,400);
+	text-align: center;
+}
+.p-about-link-txt {
+	@include fz(12,18,100,400);
+}
+
+
+
+/* 下層ページ導線 3column */
+.p-about-link-small-wrap {
+	width: 85%;
+	margin: 0 auto;
+	@include flex(center,start,nowrap,center);
+}
+.p-about-link-small {
+	width: calc((100% - 75px) / 3);
+	margin: 0 12.5px;
+	
+	a {
+		display: block;
+		box-shadow: 3px 3px 6px rgba(0,0,0,0.16);
+		position: relative;
+		
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0.3);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			opacity: 1;
+			transition: .3s;
+		}
+	}
+}
+.p-about-link-small-ttl {
+	width: 100%;
+	padding: rem(8) 0;
+	text-align: center;
+	@include fz(15,28,300,700);
+	background: #000000;
+	position: relative;
+	z-index: 2;
+	transition: .3s;
+}
+
+.p-about-link-img-caption {
+	@include fz(10,15,100,300);
+	text-shadow: 0 0 5px #2B2624;
+	position: absolute;
+	bottom: 6px;
+	right: 10px;
+	z-index: 3;
+}
+
+.p-about-link-small-txt {
+	margin-top: rem(12);
+	@include fz(14,20,100,300);
+}
+
+
+@media screen and (min-width: 768px){
+	
+	.p-about-link-small {
+		a {
+			&:hover::after {
+				opacity: 0;
+			}
+			
+			
+			&:hover .p-about-link-small-ttl {
+				color: #F7ED6A;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: #{$breakpoint}px){
+	
+	.p-sec-about {
+		width: 100%;
+		padding: vw(64) 0 vw(88);
+		
+		.m-sec-inn {
+			width: 100%;
+			max-width: initial;
+		}
+	}
+
+	.p-about-txt {
+		width: 90%;
+		margin: 0 auto vw(64);
+		@include spfz(30);
+		text-align: left;
+	}
+
+	/* 下層ページ導線 横長 */
+	.p-about-link-wrap {
+		width: 100%;
+		margin-bottom: vw(88);
+	}
+	.p-about-link {
+		width: 100%;
+		margin-top: vw(40);
+		padding: vw(44) vw(80) vw(64);
+		display: block;
+		box-shadow: none;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+		
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			background: rgba(255,255,255,0.2);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			transition: .3s;
+		}
+		&:hover::after {
+			opacity: 1;
+		}
+	}
+
+	.p-about-link-onsen {
+		background-image: url("../../images/top/img_top_01_sp.jpg");
+	}
+
+	.p-about-link-cuisine {
+		background-image: url("../../images/top/img_top_02_sp.jpg");
+	}
+
+	.p-about-link-rooms {
+		background-image: url("../../images/top/img_top_03_sp.jpg");
+	}
+
+	.p-about-link-facility {
+		background-image: url("../../images/top/img_top_04_sp.jpg");
+	}
+
+	.p-about-txt-wrap {
+		width: 58%;
+		max-width: initial;
+		padding: vw(76) vw(32) vw(40);
+		background: rgba(0,0,0,0.51);
+		border: 1px solid rgba(255,255,255,0.51);
+		position: relative;
+		z-index: 3;
+		transition: .3s;
+
+		&.is-odd {
+
+			.p-about-link-txt {
+				width: 100%;
+				margin-top: vw(40);
+			}
+			.p-about-link-ttl-en {
+				margin-left: vw(32);
+			}
+		}
+
+		&.is-even {
+
+			.p-about-link-txt {
+				margin-right: vw(32);
+			}
+			.p-about-link-ttl-en {
+				margin-top: vw(40);
+			}
+		}
+	}
+	
+	.p-about-link:hover .p-about-txt-wrap::after {
+		content: '';
+		width: 100%;
+		height: 100%;
+		border: 2px solid rgba(255,255,255,0.7);
+		position: absolute;
+		top: -2px;
+		left: -2px;
+	}
+
+	.p-about-link-ttl {
+		@include spfz(56);
+	}
+	.p-about-link-ttl-en {
+		@include spfz(18);
+	}
+	.p-about-link-txt {
+		@include spfz(18);
+	}
+
+
+
+	/* 下層ページ導線 3column */
+	.p-about-link-small-wrap {
+		width: 75%;
+		margin: 0 auto;
+		@include flex(center,start,wrap,center);
+	}
+	.p-about-link-small {
+		width: 100%;
+		margin: 0 auto;
+
+		a {
+			width: 100%;
+			display: block;
+			box-shadow: none;
+			position: relative;
+
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	.p-about-link-small-access {
+		margin-bottom: vw(50);
+		background: url("../../images/top/img_top_05_sp.jpg") center center no-repeat;
+		background-size: cover;
+	}
+
+	.p-about-link-small-sightseeing {
+		margin-bottom: vw(50);
+		background: url("../../images/top/img_top_06_sp.jpg") center center no-repeat;
+		background-size: cover;
+	}
+
+	.p-about-link-small-reserve {
+		background: url("../../images/top/img_top_07_sp.jpg") center center no-repeat;
+		background-size: cover;
+	}
+	
+	.p-about-link-small-ttl {
+		width: 35%;
+		padding: vw(52) 0;
+		text-align: center;
+		@include spfz(32);
+		background: rgba(0,0,0,0.72);
+		position: relative;
+		z-index: 2;
+	}
+	
+}
+
+
+
+
+
+
+/* パララックス
+---------------------------------------------------------------------------- */
+.p-sec-view {
+	width: 100%;
+	height: 50vw;
+	margin-bottom: rem(60);
+	background: url("../../images/top/img_view.jpg") no-repeat;
+	background-size: 150%;
+    background-position: center top;
+}
+
+@media screen and (max-width: #{$breakpoint}px){
+	.p-sec-view {
+		width: 100%;
+		height: 70vw;
+		margin-bottom: 0;
+		background: url("../../images/top/img_view.jpg") no-repeat;
+		background-size: 200%;
+		background-position: center top;
+	}
+	
+}
+
+

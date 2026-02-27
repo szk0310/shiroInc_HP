@@ -1,0 +1,71 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+.main-wrap .top-txt{
+	font-size:4.5rem;
+	font-weight: 700
+}
+.main-wrap .normal-txt{
+	margin-top: 70px;
+	font-size:1.8rem;
+	line-height: 2.5;
+	letter-spacing: 0.05em
+}
+.main-wrap .name-wrap{
+	text-align: right;
+	margin-top: 70px;
+}
+.main-wrap .name-wrap p{
+	margin-top: 0.5em
+}
+.main-wrap .name-wrap p.name{
+	font-weight: 600;
+	font-size:2.8rem;
+	line-height: 1
+}
+.main-wrap .name-wrap .signature{
+	width:32%;
+	max-width: 250px;
+	margin: 50px 0 0 auto
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+
+.main-wrap .top-txt{
+	font-size:5vw;
+	font-weight: 700
+}
+.main-wrap .normal-txt{
+	margin-top: 10vw;
+	font-size:3.8vw;
+	line-height: 2;
+	letter-spacing: 0
+}
+.main-wrap .name-wrap{
+	text-align: right;
+	margin-top: 10vw;
+}
+.main-wrap .name-wrap p{
+	margin-top: 0.5em
+}
+.main-wrap .name-wrap p.name{
+	font-weight: 600;
+	font-size:4.8vw;
+	line-height: 1
+}
+.main-wrap .name-wrap .signature{
+	width:45%;
+	max-width: inherit;
+	margin: 5vw 0 3vw auto
+}
+}
+
+
+
+
+

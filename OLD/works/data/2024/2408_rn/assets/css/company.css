@@ -1,0 +1,102 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/*------------------------------------------------------------------------------------------------
+    company
+--------------------------------------------------------------------------------------------------*/
+
+.main-wrap .inner-s{
+	color:#231815;
+	font-size:1.4rem
+}
+
+
+.main-wrap .inner-s .company-wrap .company-item{
+	line-height: 2.5;
+	font-weight: 400;
+}
+.main-wrap .inner-s .company-wrap .company-item:not(:first-child){
+	margin-top: 8.3vw;
+}
+
+.main-wrap .inner-s .company-wrap .company-item .item-list{
+	margin-top: 40px
+}
+
+
+.main-wrap .inner-s .company-wrap .company-item .item-list.list1{
+	border-top:0.5px #000 solid;
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 1.5
+}
+.main-wrap .inner-s .company-wrap .company-item .item-list.list1 div:nth-child(odd){
+	width:9em;
+	padding: 5px;
+	border-bottom:0.5px #000 solid;
+	font-weight: 600
+}
+.main-wrap .inner-s .company-wrap .company-item .item-list.list1 div:nth-child(even){
+	width:calc(100% - 9em);
+	padding: 5px 10px;
+	border-bottom:0.5px #000 solid;
+
+}
+.main-wrap .inner-s .company-wrap .company-item .item-list.list1 p{
+	margin-top:1em;
+	margin-bottom: 1em
+}
+
+.main-wrap .inner-s .company-wrap .company-item .item-list.list1 p span{
+	display: inline-block
+}
+
+
+.main-wrap .inner-s .company-wrap .company-item .item-list.list2{
+	border-top:0.5px #000 solid;
+	display: flex;
+	flex-wrap: wrap;
+	line-height: 1.5
+}
+.main-wrap .inner-s .company-wrap .company-item .item-list.list2 > div{
+	width:25%;
+	padding: 1em 0;
+	border-bottom:0.5px #000 solid;
+	line-height: 1.8
+}
+.main-wrap .inner-s .company-wrap .company-item .item-list.list2 > div.wide{
+	width:50%
+}
+.main-wrap .inner-s .company-wrap .company-item .item-list.list2 .ttl{font-weight: 600}
+
+@media screen and (max-width:768px) {
+
+
+.main-wrap .inner-s{
+		font-size:3.2vw
+}
+
+
+*/
+.main-wrap .inner-s .company-wrap .company-item .item-list{
+	margin-top: 6vw
+}
+
+.main-wrap .inner-s .company-wrap .company-item .item-list.list1 div:nth-child(odd){
+	width:5em;
+	padding: 1vw;
+	border-bottom:0.5px #000 solid;
+	font-weight: 600
+}
+.main-wrap .inner-s .company-wrap .company-item .item-list.list1 div:nth-child(even){
+	width:calc(100% - 5em);
+	padding: 1vw ;
+
+}
+
+.main-wrap .inner-s .company-wrap .company-item .item-list.list2 > div{
+	width:50%;
+}
+
+}
