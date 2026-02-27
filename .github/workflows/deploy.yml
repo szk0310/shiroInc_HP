@@ -11,19 +11,42 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Remove unnecessary files
+        run: rm -rf OLD/ .github/ node_modules/ src/ .gitignore
+
       - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
-      - name: Test SSH connection (full verbose)
+      - name: Generate sftp batch file
         run: |
-          ssh -vvv -i ~/.ssh/deploy_key \
-            -p 10022 \
+          REMOTE="${{ secrets.XSERVER_DEPLOY_PATH }}"
+          {
+            # Upload HTML files
+            for f in *.html; do
+              [ -f "$f" ] && echo "put $f ${REMOTE}/$f"
+            done
+            # Create asset subdirectories
+            find assets -type d | sort | while read dir; do
+              echo "-mkdir ${REMOTE}/${dir}"
+            done
+            # Upload asset files
+            find assets -type f | while read file; do
+              echo "put ${file} ${REMOTE}/${file}"
+            done
+          } > sftp_batch.txt
+          echo "quit" >> sftp_batch.txt
+          echo "=== Batch file ($(wc -l < sftp_batch.txt) commands) ==="
+          head -10 sftp_batch.txt
+
+      - name: Deploy via sftp batch
+        run: |
+          sftp -b sftp_batch.txt \
+            -i ~/.ssh/deploy_key \
+            -P 10022 \
             -o StrictHostKeyChecking=no \
             -o UserKnownHostsFile=/dev/null \
-            -o BatchMode=yes \
-            -o ConnectTimeout=15 \
-            ${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }} \
-            "echo SSH_WORKS_FROM_ACTIONS" 2>&1 || echo "SSH exit code: $?"
+            ${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }}
+          echo "Deploy complete!"
