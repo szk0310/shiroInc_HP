@@ -11,83 +11,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Remove unnecessary files
-        run: rm -rf OLD/ .github/ node_modules/ src/ .gitignore
-
-      - name: Install paramiko
-        run: pip install paramiko
-
-      - name: Setup SSH key
+      - name: Setup SSH key and debug
         run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > /tmp/deploy_key
-          chmod 600 /tmp/deploy_key
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          echo "=== Key file info ==="
+          wc -l ~/.ssh/deploy_key
+          head -1 ~/.ssh/deploy_key
+          tail -1 ~/.ssh/deploy_key
+          echo "=== Public key from private key ==="
+          ssh-keygen -y -f ~/.ssh/deploy_key || echo "FAILED to read key"
 
-      - name: Deploy via Python paramiko SFTP
-        env:
-          XSERVER_HOST: ${{ secrets.XSERVER_HOST }}
-          XSERVER_USER: ${{ secrets.XSERVER_USER }}
-          XSERVER_DEPLOY_PATH: ${{ secrets.XSERVER_DEPLOY_PATH }}
+      - name: Test SSH connection verbose
         run: |
-          python3 << 'EOF'
-          import paramiko
-          import os
-          import sys
-
-          host = os.environ['XSERVER_HOST']
-          user = os.environ['XSERVER_USER']
-          remote_base = os.environ['XSERVER_DEPLOY_PATH']
-          key_file = '/tmp/deploy_key'
-
-          print(f"Connecting to {host}:10022 as {user}")
-
-          try:
-              key = paramiko.Ed25519Key.from_private_key_file(key_file)
-          except Exception as e:
-              print(f"Key load error: {e}")
-              sys.exit(1)
-
-          transport = paramiko.Transport((host, 10022))
-          transport.connect(username=user, pkey=key)
-          sftp = paramiko.SFTPClient.from_transport(transport)
-
-          def mkdir_p(sftp, path):
-              parts = path.split('/')
-              current = ''
-              for part in parts:
-                  if not part:
-                      continue
-                  current += '/' + part
-                  try:
-                      sftp.stat(current)
-                  except FileNotFoundError:
-                      sftp.mkdir(current)
-
-          uploaded = 0
-          errors = 0
-
-          for root, dirs, files in os.walk('.'):
-              # Skip hidden dirs
-              dirs[:] = [d for d in dirs if not d.startswith('.')]
-              for filename in files:
-                  if filename.startswith('.'):
-                      continue
-                  local_path = os.path.join(root, filename)
-                  rel_path = os.path.relpath(local_path, '.')
-                  remote_path = remote_base + '/' + rel_path.replace(os.sep, '/')
-                  remote_dir = os.path.dirname(remote_path)
-
-                  try:
-                      mkdir_p(sftp, remote_dir)
-                      sftp.put(local_path, remote_path)
-                      print(f"OK: {rel_path}")
-                      uploaded += 1
-                  except Exception as e:
-                      print(f"ERROR: {rel_path}: {e}")
-                      errors += 1
-
-          sftp.close()
-          transport.close()
-          print(f"\nDone: {uploaded} uploaded, {errors} errors")
-          if errors > 0:
-              sys.exit(1)
-          EOF
+          ssh -vvv -i ~/.ssh/deploy_key \
+            -p 10022 \
+            -o StrictHostKeyChecking=no \
+            -o UserKnownHostsFile=/dev/null \
+            -o BatchMode=yes \
+            -o ConnectTimeout=10 \
+            ${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }} \
+            "echo SSH_WORKS" 2>&1 | head -80 || true
