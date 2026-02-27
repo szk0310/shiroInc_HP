@@ -11,13 +11,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Deploy via rsync over SSH
-        uses: burnett01/rsync-deployments@7.0.1
-        with:
-          switches: -avz --delete --exclude='.git' --exclude='OLD/' --exclude='.github/'
-          path: ./
-          remote_path: ${{ secrets.XSERVER_DEPLOY_PATH }}
-          remote_host: ${{ secrets.XSERVER_HOST }}
-          remote_user: ${{ secrets.XSERVER_USER }}
-          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          remote_port: "10022"
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -p 10022 ${{ secrets.XSERVER_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy via rsync
+        run: |
+          rsync -avz --delete \
+            --exclude='.git' \
+            --exclude='OLD/' \
+            --exclude='.github/' \
+            --exclude='.DS_Store' \
+            -e "ssh -i ~/.ssh/deploy_key -p 10022 -o StrictHostKeyChecking=no" \
+            ./ ${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }}:${{ secrets.XSERVER_DEPLOY_PATH }}/
