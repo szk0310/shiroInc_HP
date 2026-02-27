@@ -29,5 +29,5 @@ jobs:
           lftp -e "
             set sftp:connect-program 'ssh -i ~/.ssh/deploy_key -p 10022 -o StrictHostKeyChecking=no';
             open sftp://${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }};
-            mirror -R --delete --exclude '^\.' ./ ${{ secrets.XSERVER_DEPLOY_PATH }}/;
+            mirror -R --exclude '^\.' ./ ${{ secrets.XSERVER_DEPLOY_PATH }}/;
             quit"
