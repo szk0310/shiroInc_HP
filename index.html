@@ -620,6 +620,16 @@
             ideaLogo.classList.toggle('is-visible', entry.isIntersecting);
         });
         observer.observe(footer);
+
+        const CHAR_WIDTH = 126;
+        function updateIdeaLogoPosition() {
+            const footerCopy = document.querySelector('.footer-copy');
+            if (!footerCopy) return;
+            const left = footerCopy.getBoundingClientRect().left;
+            ideaLogo.style.left = Math.max(10, left - CHAR_WIDTH - 20) + 'px';
+        }
+        window.addEventListener('resize', updateIdeaLogoPosition);
+        updateIdeaLogoPosition();
     </script>
 
     <script>
