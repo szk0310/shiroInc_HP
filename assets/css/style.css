@@ -1434,7 +1434,7 @@ a.more-txt {
 /*---------- fixed idea logo ----------*/
 .fixed-idea-logo {
   position: fixed;
-  left: 20px;
+  left: clamp(20px, 5vw, 80px);
   bottom: 0;
   z-index: 100;
   pointer-events: none;
