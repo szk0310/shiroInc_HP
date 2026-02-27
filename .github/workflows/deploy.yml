@@ -12,10 +12,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Remove unnecessary directories
-        run: rm -rf OLD/ .github/ node_modules/ src/
-
-      - name: Install lftp
-        run: sudo apt-get install -y lftp
+        run: rm -rf OLD/ .github/ node_modules/ src/ .gitignore .DS_Store
 
       - name: Setup SSH key
         run: |
@@ -23,15 +20,12 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
-      - name: Deploy via lftp SFTP
+      - name: Deploy via SSH tar pipe
         run: |
-          lftp -c "
-            set sftp:connect-program 'ssh -a -x -i $HOME/.ssh/deploy_key -p 10022 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
-            open sftp://${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }};
-            mirror --reverse --verbose \
-              --exclude='^\.git/' \
-              --exclude='\.DS_Store' \
-              --exclude='^\.gitignore' \
-              . ${{ secrets.XSERVER_DEPLOY_PATH }}/;
-            bye
-          "
+          tar czf - . | ssh \
+            -i ~/.ssh/deploy_key \
+            -p 10022 \
+            -o StrictHostKeyChecking=no \
+            -o UserKnownHostsFile=/dev/null \
+            ${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }} \
+            "cd ${{ secrets.XSERVER_DEPLOY_PATH }} && tar xzf - --overwrite"
