@@ -14,41 +14,80 @@ jobs:
       - name: Remove unnecessary files
         run: rm -rf OLD/ .github/ node_modules/ src/ .gitignore
 
-      - name: Install lftp
-        run: sudo apt-get install -y lftp
+      - name: Install paramiko
+        run: pip install paramiko
 
       - name: Setup SSH key
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > /tmp/deploy_key
+          chmod 600 /tmp/deploy_key
 
-      - name: Deploy via lftp SFTP (put only, no listing)
+      - name: Deploy via Python paramiko SFTP
+        env:
+          XSERVER_HOST: ${{ secrets.XSERVER_HOST }}
+          XSERVER_USER: ${{ secrets.XSERVER_USER }}
+          XSERVER_DEPLOY_PATH: ${{ secrets.XSERVER_DEPLOY_PATH }}
         run: |
-          REMOTE="${{ secrets.XSERVER_DEPLOY_PATH }}"
-          SSH_CMD="ssh -a -x -i $HOME/.ssh/deploy_key -p 10022 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+          python3 << 'EOF'
+          import paramiko
+          import os
+          import sys
 
-          # Build lftp commands: mkdir + put for each file
-          {
-            echo "set sftp:connect-program '$SSH_CMD';"
-            echo "set net:timeout 30;"
-            echo "set net:max-retries 2;"
-            echo "open sftp://${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }};"
-            # Create directories first
-            find . -mindepth 1 -type d | sort | while read dir; do
-              dir="${dir#./}"
-              echo "mkdir -p \"${REMOTE}/${dir}\";"
-            done
-            # Upload all files
-            find . -type f | sort | while read file; do
-              local="${file#./}"
-              echo "put \"${local}\" -o \"${REMOTE}/${local}\";"
-            done
-            echo "bye;"
-          } > lftp_script.txt
+          host = os.environ['XSERVER_HOST']
+          user = os.environ['XSERVER_USER']
+          remote_base = os.environ['XSERVER_DEPLOY_PATH']
+          key_file = '/tmp/deploy_key'
 
-          echo "=== Script preview ==="
-          head -15 lftp_script.txt
-          echo "=== Total lines: $(wc -l < lftp_script.txt) ==="
+          print(f"Connecting to {host}:10022 as {user}")
 
-          lftp -f lftp_script.txt
+          try:
+              key = paramiko.Ed25519Key.from_private_key_file(key_file)
+          except Exception as e:
+              print(f"Key load error: {e}")
+              sys.exit(1)
+
+          transport = paramiko.Transport((host, 10022))
+          transport.connect(username=user, pkey=key)
+          sftp = paramiko.SFTPClient.from_transport(transport)
+
+          def mkdir_p(sftp, path):
+              parts = path.split('/')
+              current = ''
+              for part in parts:
+                  if not part:
+                      continue
+                  current += '/' + part
+                  try:
+                      sftp.stat(current)
+                  except FileNotFoundError:
+                      sftp.mkdir(current)
+
+          uploaded = 0
+          errors = 0
+
+          for root, dirs, files in os.walk('.'):
+              # Skip hidden dirs
+              dirs[:] = [d for d in dirs if not d.startswith('.')]
+              for filename in files:
+                  if filename.startswith('.'):
+                      continue
+                  local_path = os.path.join(root, filename)
+                  rel_path = os.path.relpath(local_path, '.')
+                  remote_path = remote_base + '/' + rel_path.replace(os.sep, '/')
+                  remote_dir = os.path.dirname(remote_path)
+
+                  try:
+                      mkdir_p(sftp, remote_dir)
+                      sftp.put(local_path, remote_path)
+                      print(f"OK: {rel_path}")
+                      uploaded += 1
+                  except Exception as e:
+                      print(f"ERROR: {rel_path}: {e}")
+                      errors += 1
+
+          sftp.close()
+          transport.close()
+          print(f"\nDone: {uploaded} uploaded, {errors} errors")
+          if errors > 0:
+              sys.exit(1)
+          EOF
