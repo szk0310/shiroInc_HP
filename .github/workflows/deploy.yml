@@ -11,8 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Remove unnecessary directories
-        run: rm -rf OLD/ .github/ node_modules/ src/ .gitignore .DS_Store
+      - name: Install lftp
+        run: sudo apt-get install -y lftp
 
       - name: Setup SSH key
         run: |
@@ -20,12 +20,18 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
-      - name: Deploy via SSH tar pipe
+      - name: Deploy via lftp SFTP
         run: |
-          tar czf - . | ssh \
-            -i ~/.ssh/deploy_key \
-            -p 10022 \
-            -o StrictHostKeyChecking=no \
-            -o UserKnownHostsFile=/dev/null \
-            ${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }} \
-            "cd ${{ secrets.XSERVER_DEPLOY_PATH }} && tar xzf - --overwrite"
+          REMOTE="${{ secrets.XSERVER_DEPLOY_PATH }}"
+          lftp -c "
+            set sftp:connect-program 'ssh -a -x -i $HOME/.ssh/deploy_key -p 10022 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null';
+            open sftp://${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }};
+            mirror --reverse --verbose --exclude='\.DS_Store' assets/ ${REMOTE}/assets/;
+            put index.html -o ${REMOTE}/index.html;
+            put ae.html -o ${REMOTE}/ae.html;
+            put fe.html -o ${REMOTE}/fe.html;
+            put ai_marketing_flow.html -o ${REMOTE}/ai_marketing_flow.html;
+            put pp.html -o ${REMOTE}/pp.html;
+            put thanks.html -o ${REMOTE}/thanks.html;
+            bye
+          "
