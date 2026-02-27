@@ -20,24 +20,32 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
 
-      - name: Deploy assets via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          username: ${{ secrets.XSERVER_USER }}
-          server: ${{ secrets.XSERVER_HOST }}
-          port: 10022
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: './assets'
-          remote_path: ${{ secrets.XSERVER_DEPLOY_PATH }}/assets
-          sftp_only: true
+      - name: Generate sftp batch file
+        run: |
+          REMOTE="${{ secrets.XSERVER_DEPLOY_PATH }}"
+          {
+            # Upload HTML files
+            for f in *.html; do
+              [ -f "$f" ] && echo "put $f ${REMOTE}/$f"
+            done
+            # Create asset subdirectories and upload files
+            find assets -type d | sort | while read dir; do
+              echo "mkdir ${REMOTE}/${dir}"
+            done
+            find assets -type f | while read file; do
+              echo "put ${file} ${REMOTE}/${file}"
+            done
+          } > sftp_batch.txt
+          echo "quit" >> sftp_batch.txt
+          echo "=== Batch file preview (first 10 lines) ==="
+          head -10 sftp_batch.txt
+          echo "=== Total commands: $(wc -l < sftp_batch.txt) ==="
 
-      - name: Deploy HTML files via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
-        with:
-          username: ${{ secrets.XSERVER_USER }}
-          server: ${{ secrets.XSERVER_HOST }}
-          port: 10022
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          local_path: './*.html'
-          remote_path: ${{ secrets.XSERVER_DEPLOY_PATH }}
-          sftp_only: true
+      - name: Deploy via sftp batch
+        run: |
+          sftp -b sftp_batch.txt \
+            -i ~/.ssh/deploy_key \
+            -P 10022 \
+            -o StrictHostKeyChecking=no \
+            -o UserKnownHostsFile=/dev/null \
+            ${{ secrets.XSERVER_USER }}@${{ secrets.XSERVER_HOST }}
